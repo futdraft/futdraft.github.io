@@ -1,0 +1,44 @@
+/* Solution Explorer, jobb gomb a projekt nevén
+   Manage NuGet Packages
+   Browse mezőben: MySQL
+   Az Oracle MySql comagját telepíteni
+*/
+
+
+
+
+using System;
+using System.Data;
+
+using MySql.Data;
+using MySql.Data.MySqlClient;
+
+
+namespace Adatbázis
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string kapcs = "server=localhost;database=iskola;user=root;password=;port=3306;";
+            MySqlConnection conn = new MySqlConnection(kapcs);
+            try
+            {
+                conn.Open();
+
+                string sql = "SELECT tanulonev, tanuloszulido FROM tanulok WHERE tanulovaros = 'Eger' ORDER BY tanuloszulido";
+                MySqlCommand parancs = new MySqlCommand(sql, conn);
+                MySqlDataReader eredmeny = parancs.ExecuteReader();
+                while (eredmeny.Read())
+                {
+                    Console.WriteLine("Név: {0}, Születési idő {1}", eredmeny[0], eredmeny[1]);
+                }
+            }
+            catch (Exception hiba)
+            {
+                Console.WriteLine("Hiba történt: " + hiba.ToString());
+            }
+            conn.Close();
+        }
+    }
+}
