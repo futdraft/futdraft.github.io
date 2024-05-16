@@ -51,6 +51,8 @@ CREATE TABLE `players` (
 INSERT INTO `players` (`id`, `name`, `ovr`, `pos`, `league`, `nation`, `team`, `picture`) VALUES
 (0, 'Test McTestface', 1, 'CM;CAM;ST', 'Fifa', 'USA', 'Test Team', 'test.jpg');
 
+INSERT INTO `players` (`id`, `name`, `ovr`, `pos`, `league`, `nation`, `team`, `picture`) VALUES
+(1, 'Kékesi', 94, 'GK', 'Premier League', 'HUN', 'Newcastle United', 'kekesi.jpg');
 --
 -- Indexek a kiírt táblákhoz
 --
