@@ -68,7 +68,28 @@ namespace datamanipulation
 
         private void AddPlayer_Click(object sender, EventArgs e)
         {
-            string temp1 = textBox1.Text;
+            string temp1 = "0";
+            string kapcs1 = "server=localhost;database=futdraft;user=root;password=;port=3306;";
+            MySqlConnection conn1 = new MySqlConnection(kapcs1);
+            try
+            {
+                conn1.Open();
+
+                string sql = "SELECT MAX(id) FROM players";
+                MySqlCommand parancs = new MySqlCommand(sql, conn1);
+                MySqlDataReader eredmeny = parancs.ExecuteReader();
+                while (eredmeny.Read())
+                {
+                    temp1 = Convert.ToString(Convert.ToInt32(eredmeny[0])+1);
+                }
+            }
+            catch (Exception hiba)
+            {
+
+            }
+            conn1.Close();
+
+            
             string temp2 = textBox2.Text;
             string temp3 = textBox4.Text;
             string temp4 = textBox3.Text;

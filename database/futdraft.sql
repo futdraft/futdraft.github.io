@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Máj 14. 14:14
+-- Létrehozás ideje: 2024. Máj 16. 21:32
 -- Kiszolgáló verziója: 10.4.32-MariaDB
 -- PHP verzió: 8.2.12
 
@@ -36,23 +36,19 @@ CREATE TABLE `players` (
   `pos` tinytext NOT NULL,
   `league` tinytext NOT NULL,
   `nation` char(3) NOT NULL,
-  `team` tinytext NOT NULL,
-  `picture` text NOT NULL
+  `team` tinytext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- TÁBLA KAPCSOLATAI `players`:
---
 
 --
 -- A tábla adatainak kiíratása `players`
 --
 
-INSERT INTO `players` (`id`, `name`, `ovr`, `pos`, `league`, `nation`, `team`, `picture`) VALUES
-(0, 'Test McTestface', 1, 'CM;CAM;ST', 'Fifa', 'USA', 'Test Team', 'test.jpg');
+INSERT INTO `players` (`id`, `name`, `ovr`, `pos`, `league`, `nation`, `team`) VALUES
+(0, 'Test McTestface', 1, 'CM;CAM;ST', 'Fifa', 'USA', 'Test Team'),
+(1, 'Kékesi', 94, 'GK', 'Premier League', 'HUN', 'Newcastle United'),
+(2, 'VALAKI MÁS GECI', 94, 'GK', 'Premier League', 'HUN', 'Newcastle United'),
+(3, 'SAJT', 94, 'GK', 'Premier League', 'HUN', 'Newcastle United');
 
-INSERT INTO `players` (`id`, `name`, `ovr`, `pos`, `league`, `nation`, `team`, `picture`) VALUES
-(1, 'Kékesi', 94, 'GK', 'Premier League', 'HUN', 'Newcastle United', 'kekesi.jpg');
 --
 -- Indexek a kiírt táblákhoz
 --
@@ -62,27 +58,6 @@ INSERT INTO `players` (`id`, `name`, `ovr`, `pos`, `league`, `nation`, `team`, `
 --
 ALTER TABLE `players`
   ADD PRIMARY KEY (`id`);
-
-
---
--- Metaadat
---
-USE `phpmyadmin`;
-
---
--- A(z) players tábla metaadatai
---
-
---
--- A(z) futdraft adatbázis metaadatai
---
-
---
--- A tábla adatainak kiíratása `pma__central_columns`
---
-
-INSERT INTO `pma__central_columns` (`db_name`, `col_name`, `col_type`, `col_length`, `col_collation`, `col_isNull`, `col_extra`, `col_default`) VALUES
-('futdraft', 'name', 'tinytext', '', 'utf8_general_ci', 0, ',', '');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
