@@ -114,6 +114,30 @@ namespace datamanipulation
                 label16.Text = "Hiba történt. "+hiba;
             }
             conn.Close();
+
+            Players = new List<Player>();
+            comboBox1.Items.Clear();
+            string kapcs3 = "server=localhost;database=futdraft;user=root;password=;port=3306;";
+            MySqlConnection conn3 = new MySqlConnection(kapcs3);
+            try
+            {
+                conn3.Open();
+
+                string sql = "SELECT * FROM Players";
+                MySqlCommand parancs = new MySqlCommand(sql, conn3);
+                MySqlDataReader eredmeny = parancs.ExecuteReader();
+                while (eredmeny.Read())
+                {
+                    Player temp = new Player(eredmeny);
+                    Players.Add(temp);
+                    comboBox1.Items.Add(temp.Name);
+                }
+            }
+            catch (Exception hiba)
+            {
+                label17.Text = Convert.ToString(hiba);
+            }
+            conn3.Close();
         }
     }
     public class Player
