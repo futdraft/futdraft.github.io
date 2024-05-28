@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DNI96kI/LVLcQDpT8F9MuZcZzWl5J3np1SonjH46uv6r2PekO4k4349KVWnX/UMgcrrsN7UOvdwEk64EOcL4Mg==",
+  "dgSpecHash": "bX4BQXAUxBj6ftSS8F1TZLr7rq6KXI7ZvfdhTruEYzguHsWGkRFn1SN8nPOK6MnIbs1/ltaDwEkYq8APMggVqA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\samai.adam\\Downloads\\futdraft-main\\futdraft-main\\futdraft\\futdraft\\futdraft.csproj",
+  "projectFilePath": "C:\\Users\\samai.adam\\source\\repos\\futdraft\\futdraft\\futdraft.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\samai.adam\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\samai.adam\\.nuget\\packages\\google.protobuf\\3.25.1\\google.protobuf.3.25.1.nupkg.sha512",

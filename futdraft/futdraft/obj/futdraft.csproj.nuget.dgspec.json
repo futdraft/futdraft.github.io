@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\samai.adam\\Downloads\\futdraft-main\\futdraft-main\\futdraft\\futdraft\\futdraft.csproj": {}
+    "C:\\Users\\samai.adam\\source\\repos\\futdraft\\futdraft\\futdraft.csproj": {}
   },
   "projects": {
-    "C:\\Users\\samai.adam\\Downloads\\futdraft-main\\futdraft-main\\futdraft\\futdraft\\futdraft.csproj": {
+    "C:\\Users\\samai.adam\\source\\repos\\futdraft\\futdraft\\futdraft.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\samai.adam\\Downloads\\futdraft-main\\futdraft-main\\futdraft\\futdraft\\futdraft.csproj",
+        "projectUniqueName": "C:\\Users\\samai.adam\\source\\repos\\futdraft\\futdraft\\futdraft.csproj",
         "projectName": "futdraft",
-        "projectPath": "C:\\Users\\samai.adam\\Downloads\\futdraft-main\\futdraft-main\\futdraft\\futdraft\\futdraft.csproj",
+        "projectPath": "C:\\Users\\samai.adam\\source\\repos\\futdraft\\futdraft\\futdraft.csproj",
         "packagesPath": "C:\\Users\\samai.adam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\samai.adam\\Downloads\\futdraft-main\\futdraft-main\\futdraft\\futdraft\\obj\\",
+        "outputPath": "C:\\Users\\samai.adam\\source\\repos\\futdraft\\futdraft\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

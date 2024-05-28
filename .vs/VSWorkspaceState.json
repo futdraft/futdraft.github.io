@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\futdraft",
-    "\\futdraft\\NewFolder"
+    "\\futdraft\\futdraft",
+    "\\futdraft\\futdraft\\bin",
+    "\\futdraft\\WindowsFormsApp1"
   ],
-  "SelectedNode": "\\futdraft\\NewFolder",
+  "SelectedNode": "\\futdraft\\WindowsFormsApp1\\Form1.Designer.cs",
   "PreviewInSolutionExplorer": false
 }

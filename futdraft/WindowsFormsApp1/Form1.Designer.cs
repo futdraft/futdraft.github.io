@@ -66,6 +66,10 @@ namespace futdraft
             this.st5b = new System.Windows.Forms.Button();
             this.rw5b = new System.Windows.Forms.Button();
             this.lw5b = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.PlayerSelectBox = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.PlayerSelectBox)).BeginInit();
             this.SuspendLayout();
             // 
             // formationSelect
@@ -115,6 +119,7 @@ namespace futdraft
             this.gk5b.TabIndex = 4;
             this.gk5b.Text = "button1";
             this.gk5b.UseVisualStyleBackColor = true;
+            this.gk5b.Click += new System.EventHandler(this.button_clicked);
             // 
             // gk4b
             // 
@@ -124,6 +129,7 @@ namespace futdraft
             this.gk4b.TabIndex = 5;
             this.gk4b.Text = "button1";
             this.gk4b.UseVisualStyleBackColor = true;
+            this.gk4b.Click += new System.EventHandler(this.button_clicked);
             // 
             // gk3b
             // 
@@ -133,6 +139,7 @@ namespace futdraft
             this.gk3b.TabIndex = 6;
             this.gk3b.Text = "button1";
             this.gk3b.UseVisualStyleBackColor = true;
+            this.gk3b.Click += new System.EventHandler(this.button_clicked);
             // 
             // cb25b
             // 
@@ -142,6 +149,7 @@ namespace futdraft
             this.cb25b.TabIndex = 7;
             this.cb25b.Text = "button1";
             this.cb25b.UseVisualStyleBackColor = true;
+            this.cb25b.Click += new System.EventHandler(this.button_clicked);
             // 
             // cb15b
             // 
@@ -151,6 +159,7 @@ namespace futdraft
             this.cb15b.TabIndex = 8;
             this.cb15b.Text = "button2";
             this.cb15b.UseVisualStyleBackColor = true;
+            this.cb15b.Click += new System.EventHandler(this.button_clicked);
             // 
             // cb35b
             // 
@@ -160,6 +169,7 @@ namespace futdraft
             this.cb35b.TabIndex = 9;
             this.cb35b.Text = "button3";
             this.cb35b.UseVisualStyleBackColor = true;
+            this.cb35b.Click += new System.EventHandler(this.button_clicked);
             // 
             // cb14b
             // 
@@ -169,6 +179,7 @@ namespace futdraft
             this.cb14b.TabIndex = 10;
             this.cb14b.Text = "button2";
             this.cb14b.UseVisualStyleBackColor = true;
+            this.cb14b.Click += new System.EventHandler(this.button_clicked);
             // 
             // cb24b
             // 
@@ -178,7 +189,7 @@ namespace futdraft
             this.cb24b.TabIndex = 11;
             this.cb24b.Text = "button2";
             this.cb24b.UseVisualStyleBackColor = true;
-            this.cb24b.Click += new System.EventHandler(this.cb24b_Click);
+            this.cb24b.Click += new System.EventHandler(this.button_clicked);
             // 
             // rb4b
             // 
@@ -188,6 +199,7 @@ namespace futdraft
             this.rb4b.TabIndex = 12;
             this.rb4b.Text = "button2";
             this.rb4b.UseVisualStyleBackColor = true;
+            this.rb4b.Click += new System.EventHandler(this.button_clicked);
             // 
             // lb4b
             // 
@@ -197,6 +209,7 @@ namespace futdraft
             this.lb4b.TabIndex = 13;
             this.lb4b.Text = "button2";
             this.lb4b.UseVisualStyleBackColor = true;
+            this.lb4b.Click += new System.EventHandler(this.button_clicked);
             // 
             // cb23b
             // 
@@ -206,6 +219,7 @@ namespace futdraft
             this.cb23b.TabIndex = 14;
             this.cb23b.Text = "button2";
             this.cb23b.UseVisualStyleBackColor = true;
+            this.cb23b.Click += new System.EventHandler(this.button_clicked);
             // 
             // cb13b
             // 
@@ -215,6 +229,7 @@ namespace futdraft
             this.cb13b.TabIndex = 15;
             this.cb13b.Text = "button2";
             this.cb13b.UseVisualStyleBackColor = true;
+            this.cb13b.Click += new System.EventHandler(this.button_clicked);
             // 
             // cb33b
             // 
@@ -224,6 +239,7 @@ namespace futdraft
             this.cb33b.TabIndex = 16;
             this.cb33b.Text = "button2";
             this.cb33b.UseVisualStyleBackColor = true;
+            this.cb33b.Click += new System.EventHandler(this.button_clicked);
             // 
             // cm23b
             // 
@@ -233,6 +249,7 @@ namespace futdraft
             this.cm23b.TabIndex = 17;
             this.cm23b.Text = "button2";
             this.cm23b.UseVisualStyleBackColor = true;
+            this.cm23b.Click += new System.EventHandler(this.button_clicked);
             // 
             // cm13b
             // 
@@ -242,6 +259,7 @@ namespace futdraft
             this.cm13b.TabIndex = 18;
             this.cm13b.Text = "button2";
             this.cm13b.UseVisualStyleBackColor = true;
+            this.cm13b.Click += new System.EventHandler(this.button_clicked);
             // 
             // rm3b
             // 
@@ -251,6 +269,7 @@ namespace futdraft
             this.rm3b.TabIndex = 20;
             this.rm3b.Text = "button2";
             this.rm3b.UseVisualStyleBackColor = true;
+            this.rm3b.Click += new System.EventHandler(this.button_clicked);
             // 
             // lm3b
             // 
@@ -260,6 +279,7 @@ namespace futdraft
             this.lm3b.TabIndex = 21;
             this.lm3b.Text = "button2";
             this.lm3b.UseVisualStyleBackColor = true;
+            this.lm3b.Click += new System.EventHandler(this.button_clicked);
             // 
             // cdm14b
             // 
@@ -269,6 +289,7 @@ namespace futdraft
             this.cdm14b.TabIndex = 22;
             this.cdm14b.Text = "button2";
             this.cdm14b.UseVisualStyleBackColor = true;
+            this.cdm14b.Click += new System.EventHandler(this.button_clicked);
             // 
             // cdm24b
             // 
@@ -278,6 +299,7 @@ namespace futdraft
             this.cdm24b.TabIndex = 23;
             this.cdm24b.Text = "button2";
             this.cdm24b.UseVisualStyleBackColor = true;
+            this.cdm24b.Click += new System.EventHandler(this.button_clicked);
             // 
             // cam4b
             // 
@@ -287,6 +309,7 @@ namespace futdraft
             this.cam4b.TabIndex = 24;
             this.cam4b.Text = "button2";
             this.cam4b.UseVisualStyleBackColor = true;
+            this.cam4b.Click += new System.EventHandler(this.button_clicked);
             // 
             // rb5b
             // 
@@ -296,6 +319,7 @@ namespace futdraft
             this.rb5b.TabIndex = 25;
             this.rb5b.Text = "button2";
             this.rb5b.UseVisualStyleBackColor = true;
+            this.rb5b.Click += new System.EventHandler(this.button_clicked);
             // 
             // lb5b
             // 
@@ -305,6 +329,7 @@ namespace futdraft
             this.lb5b.TabIndex = 26;
             this.lb5b.Text = "button2";
             this.lb5b.UseVisualStyleBackColor = true;
+            this.lb5b.Click += new System.EventHandler(this.button_clicked);
             // 
             // cm15b
             // 
@@ -314,6 +339,7 @@ namespace futdraft
             this.cm15b.TabIndex = 27;
             this.cm15b.Text = "button2";
             this.cm15b.UseVisualStyleBackColor = true;
+            this.cm15b.Click += new System.EventHandler(this.button_clicked);
             // 
             // cm25b
             // 
@@ -323,6 +349,7 @@ namespace futdraft
             this.cm25b.TabIndex = 28;
             this.cm25b.Text = "button2";
             this.cm25b.UseVisualStyleBackColor = true;
+            this.cm25b.Click += new System.EventHandler(this.button_clicked);
             // 
             // st3b
             // 
@@ -332,6 +359,7 @@ namespace futdraft
             this.st3b.TabIndex = 29;
             this.st3b.Text = "button2";
             this.st3b.UseVisualStyleBackColor = true;
+            this.st3b.Click += new System.EventHandler(this.button_clicked);
             // 
             // rw4b
             // 
@@ -341,6 +369,7 @@ namespace futdraft
             this.rw4b.TabIndex = 30;
             this.rw4b.Text = "button2";
             this.rw4b.UseVisualStyleBackColor = true;
+            this.rw4b.Click += new System.EventHandler(this.button_clicked);
             // 
             // lw4b
             // 
@@ -350,6 +379,7 @@ namespace futdraft
             this.lw4b.TabIndex = 31;
             this.lw4b.Text = "button2";
             this.lw4b.UseVisualStyleBackColor = true;
+            this.lw4b.Click += new System.EventHandler(this.button_clicked);
             // 
             // st4b
             // 
@@ -359,6 +389,7 @@ namespace futdraft
             this.st4b.TabIndex = 32;
             this.st4b.Text = "button2";
             this.st4b.UseVisualStyleBackColor = true;
+            this.st4b.Click += new System.EventHandler(this.button_clicked);
             // 
             // rw3b
             // 
@@ -368,6 +399,7 @@ namespace futdraft
             this.rw3b.TabIndex = 33;
             this.rw3b.Text = "button2";
             this.rw3b.UseVisualStyleBackColor = true;
+            this.rw3b.Click += new System.EventHandler(this.button_clicked);
             // 
             // lw3b
             // 
@@ -377,6 +409,7 @@ namespace futdraft
             this.lw3b.TabIndex = 34;
             this.lw3b.Text = "button2";
             this.lw3b.UseVisualStyleBackColor = true;
+            this.lw3b.Click += new System.EventHandler(this.button_clicked);
             // 
             // st5b
             // 
@@ -386,6 +419,7 @@ namespace futdraft
             this.st5b.TabIndex = 35;
             this.st5b.Text = "button2";
             this.st5b.UseVisualStyleBackColor = true;
+            this.st5b.Click += new System.EventHandler(this.button_clicked);
             // 
             // rw5b
             // 
@@ -395,6 +429,7 @@ namespace futdraft
             this.rw5b.TabIndex = 36;
             this.rw5b.Text = "button2";
             this.rw5b.UseVisualStyleBackColor = true;
+            this.rw5b.Click += new System.EventHandler(this.button_clicked);
             // 
             // lw5b
             // 
@@ -404,12 +439,41 @@ namespace futdraft
             this.lw5b.TabIndex = 37;
             this.lw5b.Text = "button2";
             this.lw5b.UseVisualStyleBackColor = true;
+            this.lw5b.Click += new System.EventHandler(this.button_clicked);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(44, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "label1";
+            // 
+            // PlayerSelectBox
+            // 
+            this.PlayerSelectBox.Location = new System.Drawing.Point(127, 169);
+            this.PlayerSelectBox.Name = "PlayerSelectBox";
+            this.PlayerSelectBox.Size = new System.Drawing.Size(826, 218);
+            this.PlayerSelectBox.TabIndex = 39;
+            this.PlayerSelectBox.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Location = new System.Drawing.Point(435, 432);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.TabIndex = 40;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1079, 556);
+            this.ClientSize = new System.Drawing.Size(1083, 556);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.PlayerSelectBox);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lw5b);
             this.Controls.Add(this.rw5b);
             this.Controls.Add(this.st5b);
@@ -450,6 +514,7 @@ namespace futdraft
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.PlayerSelectBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -494,6 +559,9 @@ namespace futdraft
         private System.Windows.Forms.Button st5b;
         private System.Windows.Forms.Button rw5b;
         private System.Windows.Forms.Button lw5b;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox PlayerSelectBox;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

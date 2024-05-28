@@ -132,9 +132,11 @@ namespace futdraft
             formationSelect.Visible = false;
         }
 
-        private void cb24b_Click(object sender, EventArgs e)
+        private void button_clicked(object sender, EventArgs e)
         {
-
+            Button button = sender as Button;
+            var test = button.Name;
+            label1.Text = test;
         }
     }
 }
