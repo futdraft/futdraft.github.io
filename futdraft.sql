@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Máj 28. 14:39
+-- Létrehozás ideje: 2024. Máj 30. 10:34
 -- Kiszolgáló verziója: 10.4.32-MariaDB
 -- PHP verzió: 8.2.12
 
@@ -66,7 +66,14 @@ INSERT INTO `players` (`id`, `name`, `ovr`, `pos`, `league`, `nation`, `team`) V
 (20, 'Iker Casillas', 92, 'GK', 'Icons', 'ESP', 'Icons'),
 (21, 'Edwin Van Der Sar', 92, 'GK', 'Icons', 'NLD', 'Icons'),
 (22, 'Hugo Lloris', 91, 'GK', 'Premier League', 'FRA', 'Tottenham'),
-(23, 'Marc-André Ter Stegen', 90, 'GK', 'Laliga', 'GER', 'FC Barcelona');
+(23, 'Marc-André Ter Stegen', 90, 'GK', 'Laliga', 'GER', 'FC Barcelona'),
+(24, 'Nick Pope', 86, 'GK', 'Premier League', 'ENG', 'Newcastle United'),
+(25, 'Theo Hernández', 97, 'LB;LWB;LM', 'Serie A', 'FRA', 'AC Milan'),
+(26, 'Alejandro Grimaldo', 95, 'LB;LWB;LM', 'Bundesliga', 'ESP', 'Leverkusen'),
+(27, 'Joao Cancelo', 95, 'LB;LWB;RB', 'Laliga', 'PRT', 'FC Barcelona'),
+(28, 'Rafael Leao', 93, 'LW;LM;ST', 'Serie A', 'PRT', 'AC Milan'),
+(29, 'Paulo Dybala', 96, 'ST; CAM', 'Serie A', 'ARG', 'Roma'),
+(30, 'Victor Oshimen', 95, 'ST', 'Serie A', 'NIG', 'Napoli');
 
 --
 -- Indexek a kiírt táblákhoz
