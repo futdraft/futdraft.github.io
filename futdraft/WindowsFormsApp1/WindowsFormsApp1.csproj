@@ -117,6 +117,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -131,6 +132,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="resources\images\10.png" />
+    <EmbeddedResource Include="resources\images\11.png" />
+    <EmbeddedResource Include="resources\images\12.png" />
+    <EmbeddedResource Include="resources\images\13.png" />
+    <EmbeddedResource Include="resources\images\14.png" />
+    <EmbeddedResource Include="resources\images\15.png" />
+    <EmbeddedResource Include="resources\images\16.png" />
+    <EmbeddedResource Include="resources\images\17.png" />
+    <EmbeddedResource Include="resources\images\18.png" />
+    <EmbeddedResource Include="resources\images\19.png" />
+    <EmbeddedResource Include="resources\images\2.png" />
+    <EmbeddedResource Include="resources\images\20.png" />
+    <EmbeddedResource Include="resources\images\21.png" />
+    <EmbeddedResource Include="resources\images\22.png" />
+    <EmbeddedResource Include="resources\images\23.png" />
+    <EmbeddedResource Include="resources\images\3.png" />
+    <EmbeddedResource Include="resources\images\4.png" />
+    <EmbeddedResource Include="resources\images\5.png" />
+    <EmbeddedResource Include="resources\images\6.png" />
+    <EmbeddedResource Include="resources\images\7.png" />
+    <EmbeddedResource Include="resources\images\8.png" />
+    <EmbeddedResource Include="resources\images\9.png" />
+    <EmbeddedResource Include="resources\images\background.jpg" />
+    <EmbeddedResource Include="resources\images\coconut.jpg" />
+    <EmbeddedResource Include="resources\images\empty.png" />
+    <EmbeddedResource Include="resources\images\Fülöp.png" />
+    <EmbeddedResource Include="resources\images\icon.png" />
+    <EmbeddedResource Include="resources\images\kekesi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Image1.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

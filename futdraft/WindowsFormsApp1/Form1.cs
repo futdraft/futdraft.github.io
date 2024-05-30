@@ -90,6 +90,9 @@ namespace futdraft
                 if (button.Name.Contains("5b"))
                 {
                     button.Visible = true;
+                    button.BackgroundImage = WindowsFormsApp1.Properties.Resources.empty;
+                    button.BackgroundImageLayout = ImageLayout.Zoom;
+                    button.Text = "";
                 }
                 if (button.Name.Contains("form"))
                 {
@@ -106,6 +109,9 @@ namespace futdraft
                 if (button.Name.Contains("4b"))
                 {
                     button.Visible = true;
+                    button.BackgroundImage = WindowsFormsApp1.Properties.Resources.empty;
+                    button.BackgroundImageLayout = ImageLayout.Zoom;
+                    button.Text = "";
                 }
                 if (button.Name.Contains("form"))
                 {
@@ -122,6 +128,9 @@ namespace futdraft
                 if (button.Name.Contains("3b"))
                 {
                     button.Visible = true;
+                    button.BackgroundImage = WindowsFormsApp1.Properties.Resources.empty;
+                    button.BackgroundImageLayout = ImageLayout.Zoom;
+                    button.Text = "";
                 }
                 if (button.Name.Contains("form"))
                 {
@@ -135,8 +144,24 @@ namespace futdraft
         private void button_clicked(object sender, EventArgs e)
         {
             Button button = sender as Button;
-            var test = button.Name;
-            label1.Text = test;
+            string pos = button.Name;
+            label1.Text = pos;
+            generate_players(pos);
+            if (button.BackgroundImage == WindowsFormsApp1.Properties.Resources.empty)
+            {
+                generate_players(pos);
+            }
+        }
+
+        public void generate_players(string pos)
+        {
+            foreach (Control control in this.Controls)
+            {
+                if (control.Name.Contains("Select"))
+                {
+                    control.Visible = true;
+                }
+            }
         }
     }
 }
