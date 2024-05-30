@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -156,6 +157,15 @@ namespace futdraft
 
         public void generate_players(string pos)
         {
+            string input = pos;
+
+            // Define the regex pattern to match all digits
+            string pattern = @"\d";
+
+            // Replace all matches with an empty string
+            pos = Regex.Replace(input, pattern, "");
+            pos = pos.Remove(pos.Length - 1);
+
             foreach (Control control in this.Controls)
             {
                 if (control.Name.Contains("Select"))
@@ -168,7 +178,7 @@ namespace futdraft
             List<Player> availablePlayers = new List<Player>();
             foreach (var player in Players)
             {
-                if (player.Pos == pos)
+                if (player.Pos.Contains(pos.Substring(0,2).ToUpper()))
                 {
                     availablePlayers.Add(player);
                 }
@@ -181,13 +191,43 @@ namespace futdraft
             {
                 int maxint = availablePlayers.Count();
                 int random = rnd.Next(maxint);
-                if (!generatedPlayers.Contains(generatedPlayers[random]))
+                if (!generatedPlayers.Contains(availablePlayers[random]))
                 {
                     generatedPlayers.Add(availablePlayers[random]);
                 }
             }
 
-            playerSelect1.BackgroundImage =
+            playerSelect1.BackgroundImage = (Image)WindowsFormsApp1.Properties.Resources.ResourceManager.GetObject("_" + generatedPlayers[0].Id);
+            playerSelect2.BackgroundImage = (Image)WindowsFormsApp1.Properties.Resources.ResourceManager.GetObject("_" + generatedPlayers[1].Id);
+            playerSelect3.BackgroundImage = (Image)WindowsFormsApp1.Properties.Resources.ResourceManager.GetObject("_" + generatedPlayers[2].Id);
+            playerSelect4.BackgroundImage = (Image)WindowsFormsApp1.Properties.Resources.ResourceManager.GetObject("_" + generatedPlayers[3].Id);
+            playerSelect5.BackgroundImage = (Image)WindowsFormsApp1.Properties.Resources.ResourceManager.GetObject("_" + generatedPlayers[4].Id);
+
+        }
+
+        private void playerSelect1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void playerSelect2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void playerSelect3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PlayerSelectBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void playerSelect5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

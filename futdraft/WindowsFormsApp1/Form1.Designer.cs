@@ -67,14 +67,15 @@ namespace futdraft
             this.rw5b = new System.Windows.Forms.Button();
             this.lw5b = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.PlayerSelectBox = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.playerSelect3 = new System.Windows.Forms.Button();
             this.playerSelect4 = new System.Windows.Forms.Button();
             this.playerSelect5 = new System.Windows.Forms.Button();
             this.playerSelect2 = new System.Windows.Forms.Button();
             this.playerSelect1 = new System.Windows.Forms.Button();
+            this.PlayerSelectBox = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.playerSelectBackground = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.PlayerSelectBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -456,6 +457,69 @@ namespace futdraft
             this.label1.TabIndex = 38;
             this.label1.Text = "label1";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(985, 43);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(86, 113);
+            this.button2.TabIndex = 41;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // playerSelect3
+            // 
+            this.playerSelect3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.playerSelect3.Location = new System.Drawing.Point(477, 195);
+            this.playerSelect3.Name = "playerSelect3";
+            this.playerSelect3.Size = new System.Drawing.Size(130, 170);
+            this.playerSelect3.TabIndex = 42;
+            this.playerSelect3.UseVisualStyleBackColor = true;
+            this.playerSelect3.Visible = false;
+            this.playerSelect3.Click += new System.EventHandler(this.playerSelect3_Click);
+            // 
+            // playerSelect4
+            // 
+            this.playerSelect4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.playerSelect4.Location = new System.Drawing.Point(623, 195);
+            this.playerSelect4.Name = "playerSelect4";
+            this.playerSelect4.Size = new System.Drawing.Size(130, 170);
+            this.playerSelect4.TabIndex = 43;
+            this.playerSelect4.UseVisualStyleBackColor = true;
+            this.playerSelect4.Visible = false;
+            // 
+            // playerSelect5
+            // 
+            this.playerSelect5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.playerSelect5.Location = new System.Drawing.Point(773, 195);
+            this.playerSelect5.Name = "playerSelect5";
+            this.playerSelect5.Size = new System.Drawing.Size(130, 170);
+            this.playerSelect5.TabIndex = 44;
+            this.playerSelect5.UseVisualStyleBackColor = true;
+            this.playerSelect5.Visible = false;
+            this.playerSelect5.Click += new System.EventHandler(this.playerSelect5_Click);
+            // 
+            // playerSelect2
+            // 
+            this.playerSelect2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.playerSelect2.Location = new System.Drawing.Point(334, 195);
+            this.playerSelect2.Name = "playerSelect2";
+            this.playerSelect2.Size = new System.Drawing.Size(130, 170);
+            this.playerSelect2.TabIndex = 45;
+            this.playerSelect2.UseVisualStyleBackColor = true;
+            this.playerSelect2.Visible = false;
+            this.playerSelect2.Click += new System.EventHandler(this.playerSelect2_Click);
+            // 
+            // playerSelect1
+            // 
+            this.playerSelect1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.playerSelect1.Location = new System.Drawing.Point(181, 195);
+            this.playerSelect1.Name = "playerSelect1";
+            this.playerSelect1.Size = new System.Drawing.Size(130, 170);
+            this.playerSelect1.TabIndex = 46;
+            this.playerSelect1.UseVisualStyleBackColor = true;
+            this.playerSelect1.Visible = false;
+            this.playerSelect1.Click += new System.EventHandler(this.playerSelect1_Click);
+            // 
             // PlayerSelectBox
             // 
             this.PlayerSelectBox.Location = new System.Drawing.Point(133, 169);
@@ -464,6 +528,7 @@ namespace futdraft
             this.PlayerSelectBox.TabIndex = 39;
             this.PlayerSelectBox.TabStop = false;
             this.PlayerSelectBox.Visible = false;
+            this.PlayerSelectBox.Click += new System.EventHandler(this.PlayerSelectBox_Click);
             // 
             // button1
             // 
@@ -478,64 +543,14 @@ namespace futdraft
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Visible = false;
             // 
-            // button2
+            // playerSelectBackground
             // 
-            this.button2.Location = new System.Drawing.Point(985, 43);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 113);
-            this.button2.TabIndex = 41;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // playerSelect3
-            // 
-            this.playerSelect3.Location = new System.Drawing.Point(477, 195);
-            this.playerSelect3.Name = "playerSelect3";
-            this.playerSelect3.Size = new System.Drawing.Size(130, 170);
-            this.playerSelect3.TabIndex = 42;
-            this.playerSelect3.Text = "button2";
-            this.playerSelect3.UseVisualStyleBackColor = true;
-            this.playerSelect3.Visible = false;
-            // 
-            // playerSelect4
-            // 
-            this.playerSelect4.Location = new System.Drawing.Point(623, 195);
-            this.playerSelect4.Name = "playerSelect4";
-            this.playerSelect4.Size = new System.Drawing.Size(130, 170);
-            this.playerSelect4.TabIndex = 43;
-            this.playerSelect4.Text = "button2";
-            this.playerSelect4.UseVisualStyleBackColor = true;
-            this.playerSelect4.Visible = false;
-            // 
-            // playerSelect5
-            // 
-            this.playerSelect5.Location = new System.Drawing.Point(773, 195);
-            this.playerSelect5.Name = "playerSelect5";
-            this.playerSelect5.Size = new System.Drawing.Size(130, 170);
-            this.playerSelect5.TabIndex = 44;
-            this.playerSelect5.Text = "button2";
-            this.playerSelect5.UseVisualStyleBackColor = true;
-            this.playerSelect5.Visible = false;
-            // 
-            // playerSelect2
-            // 
-            this.playerSelect2.Location = new System.Drawing.Point(334, 195);
-            this.playerSelect2.Name = "playerSelect2";
-            this.playerSelect2.Size = new System.Drawing.Size(130, 170);
-            this.playerSelect2.TabIndex = 45;
-            this.playerSelect2.Text = "button2";
-            this.playerSelect2.UseVisualStyleBackColor = true;
-            this.playerSelect2.Visible = false;
-            // 
-            // playerSelect1
-            // 
-            this.playerSelect1.Location = new System.Drawing.Point(181, 195);
-            this.playerSelect1.Name = "playerSelect1";
-            this.playerSelect1.Size = new System.Drawing.Size(130, 170);
-            this.playerSelect1.TabIndex = 46;
-            this.playerSelect1.Text = "button2";
-            this.playerSelect1.UseVisualStyleBackColor = true;
-            this.playerSelect1.Visible = false;
+            this.playerSelectBackground.BackColor = System.Drawing.Color.Black;
+            this.playerSelectBackground.Location = new System.Drawing.Point(-6, -6);
+            this.playerSelectBackground.Name = "playerSelectBackground";
+            this.playerSelectBackground.Size = new System.Drawing.Size(1095, 568);
+            this.playerSelectBackground.TabIndex = 47;
+            this.playerSelectBackground.Visible = false;
             // 
             // Form1
             // 
@@ -547,9 +562,10 @@ namespace futdraft
             this.Controls.Add(this.playerSelect5);
             this.Controls.Add(this.playerSelect4);
             this.Controls.Add(this.playerSelect3);
+            this.Controls.Add(this.PlayerSelectBox);
+            this.Controls.Add(this.playerSelectBackground);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.PlayerSelectBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lw5b);
             this.Controls.Add(this.rw5b);
@@ -645,6 +661,7 @@ namespace futdraft
         private System.Windows.Forms.Button playerSelect5;
         private System.Windows.Forms.Button playerSelect2;
         private System.Windows.Forms.Button playerSelect1;
+        private System.Windows.Forms.Panel playerSelectBackground;
     }
 }
 
