@@ -163,6 +163,31 @@ namespace futdraft
                     control.Visible = true;
                 }
             }
+
+            //Megfelelő pozícióban lévő játékosok összeszedése
+            List<Player> availablePlayers = new List<Player>();
+            foreach (var player in Players)
+            {
+                if (player.Pos == pos)
+                {
+                    availablePlayers.Add(player);
+                }
+            }
+
+            //5 random játékos kiválasztása generatedPlayers-be
+            Random rnd = new Random();
+            List<Player> generatedPlayers = new List<Player>();
+            while (generatedPlayers.Count <= 5)
+            {
+                int maxint = availablePlayers.Count();
+                int random = rnd.Next(maxint);
+                if (!generatedPlayers.Contains(generatedPlayers[random]))
+                {
+                    generatedPlayers.Add(availablePlayers[random]);
+                }
+            }
+
+            playerSelect1.BackgroundImage =
         }
     }
 }

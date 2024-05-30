@@ -70,6 +70,11 @@ namespace futdraft
             this.PlayerSelectBox = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.playerSelect3 = new System.Windows.Forms.Button();
+            this.playerSelect4 = new System.Windows.Forms.Button();
+            this.playerSelect5 = new System.Windows.Forms.Button();
+            this.playerSelect2 = new System.Windows.Forms.Button();
+            this.playerSelect1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PlayerSelectBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -453,9 +458,9 @@ namespace futdraft
             // 
             // PlayerSelectBox
             // 
-            this.PlayerSelectBox.Location = new System.Drawing.Point(127, 169);
+            this.PlayerSelectBox.Location = new System.Drawing.Point(133, 169);
             this.PlayerSelectBox.Name = "PlayerSelectBox";
-            this.PlayerSelectBox.Size = new System.Drawing.Size(826, 218);
+            this.PlayerSelectBox.Size = new System.Drawing.Size(820, 218);
             this.PlayerSelectBox.TabIndex = 39;
             this.PlayerSelectBox.TabStop = false;
             this.PlayerSelectBox.Visible = false;
@@ -482,11 +487,66 @@ namespace futdraft
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // playerSelect3
+            // 
+            this.playerSelect3.Location = new System.Drawing.Point(477, 195);
+            this.playerSelect3.Name = "playerSelect3";
+            this.playerSelect3.Size = new System.Drawing.Size(130, 170);
+            this.playerSelect3.TabIndex = 42;
+            this.playerSelect3.Text = "button2";
+            this.playerSelect3.UseVisualStyleBackColor = true;
+            this.playerSelect3.Visible = false;
+            // 
+            // playerSelect4
+            // 
+            this.playerSelect4.Location = new System.Drawing.Point(623, 195);
+            this.playerSelect4.Name = "playerSelect4";
+            this.playerSelect4.Size = new System.Drawing.Size(130, 170);
+            this.playerSelect4.TabIndex = 43;
+            this.playerSelect4.Text = "button2";
+            this.playerSelect4.UseVisualStyleBackColor = true;
+            this.playerSelect4.Visible = false;
+            // 
+            // playerSelect5
+            // 
+            this.playerSelect5.Location = new System.Drawing.Point(773, 195);
+            this.playerSelect5.Name = "playerSelect5";
+            this.playerSelect5.Size = new System.Drawing.Size(130, 170);
+            this.playerSelect5.TabIndex = 44;
+            this.playerSelect5.Text = "button2";
+            this.playerSelect5.UseVisualStyleBackColor = true;
+            this.playerSelect5.Visible = false;
+            // 
+            // playerSelect2
+            // 
+            this.playerSelect2.Location = new System.Drawing.Point(334, 195);
+            this.playerSelect2.Name = "playerSelect2";
+            this.playerSelect2.Size = new System.Drawing.Size(130, 170);
+            this.playerSelect2.TabIndex = 45;
+            this.playerSelect2.Text = "button2";
+            this.playerSelect2.UseVisualStyleBackColor = true;
+            this.playerSelect2.Visible = false;
+            // 
+            // playerSelect1
+            // 
+            this.playerSelect1.Location = new System.Drawing.Point(181, 195);
+            this.playerSelect1.Name = "playerSelect1";
+            this.playerSelect1.Size = new System.Drawing.Size(130, 170);
+            this.playerSelect1.TabIndex = 46;
+            this.playerSelect1.Text = "button2";
+            this.playerSelect1.UseVisualStyleBackColor = true;
+            this.playerSelect1.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1083, 556);
+            this.Controls.Add(this.playerSelect1);
+            this.Controls.Add(this.playerSelect2);
+            this.Controls.Add(this.playerSelect5);
+            this.Controls.Add(this.playerSelect4);
+            this.Controls.Add(this.playerSelect3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.PlayerSelectBox);
@@ -580,6 +640,11 @@ namespace futdraft
         private System.Windows.Forms.PictureBox PlayerSelectBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button playerSelect3;
+        private System.Windows.Forms.Button playerSelect4;
+        private System.Windows.Forms.Button playerSelect5;
+        private System.Windows.Forms.Button playerSelect2;
+        private System.Windows.Forms.Button playerSelect1;
     }
 }
 
