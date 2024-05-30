@@ -17,11 +17,13 @@ namespace futdraft
     public partial class Form1 : Form
     {
         public List<Player> Players;
+        private Image empty;
 
         public Form1()
         {
             InitializeComponent();
             Players = new List<Player>();
+            empty = WindowsFormsApp1.Properties.Resources.empty;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -90,7 +92,7 @@ namespace futdraft
                 if (button.Name.Contains("5b"))
                 {
                     button.Visible = true;
-                    button.BackgroundImage = WindowsFormsApp1.Properties.Resources.empty;
+                    button.BackgroundImage = empty;
                     button.BackgroundImageLayout = ImageLayout.Zoom;
                     button.Text = "";
                 }
@@ -109,7 +111,7 @@ namespace futdraft
                 if (button.Name.Contains("4b"))
                 {
                     button.Visible = true;
-                    button.BackgroundImage = WindowsFormsApp1.Properties.Resources.empty;
+                    button.BackgroundImage = empty;
                     button.BackgroundImageLayout = ImageLayout.Zoom;
                     button.Text = "";
                 }
@@ -128,7 +130,7 @@ namespace futdraft
                 if (button.Name.Contains("3b"))
                 {
                     button.Visible = true;
-                    button.BackgroundImage = WindowsFormsApp1.Properties.Resources.empty;
+                    button.BackgroundImage = empty;
                     button.BackgroundImageLayout = ImageLayout.Zoom;
                     button.Text = "";
                 }
@@ -146,8 +148,7 @@ namespace futdraft
             Button button = sender as Button;
             string pos = button.Name;
             label1.Text = pos;
-            generate_players(pos);
-            if (button.BackgroundImage == WindowsFormsApp1.Properties.Resources.empty)
+            if (button.BackgroundImage == empty)
             {
                 generate_players(pos);
             }
