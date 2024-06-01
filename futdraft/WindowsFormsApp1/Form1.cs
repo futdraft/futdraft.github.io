@@ -17,15 +17,21 @@ namespace futdraft
 {
     public partial class Form1 : Form
     {
+        public List<Player> generatedPlayers;
         public List<Player> Players;
         private Image empty;
+        public Dictionary<string, string> team;
+        public string selectedPlayer;
 
         public Form1()
         {
             InitializeComponent();
+            generatedPlayers = new List<Player>();
             Players = new List<Player>();
             empty = WindowsFormsApp1.Properties.Resources.empty;
-        }
+            team = new Dictionary<string, string>();
+            selectedPlayer = "";
+    }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -96,6 +102,7 @@ namespace futdraft
                     button.BackgroundImage = empty;
                     button.BackgroundImageLayout = ImageLayout.Zoom;
                     button.Text = "";
+                    team.Add(button.Name, "");
                 }
                 if (button.Name.Contains("form"))
                 {
@@ -115,6 +122,7 @@ namespace futdraft
                     button.BackgroundImage = empty;
                     button.BackgroundImageLayout = ImageLayout.Zoom;
                     button.Text = "";
+                    team.Add(button.Name, "");
                 }
                 if (button.Name.Contains("form"))
                 {
@@ -134,6 +142,7 @@ namespace futdraft
                     button.BackgroundImage = empty;
                     button.BackgroundImageLayout = ImageLayout.Zoom;
                     button.Text = "";
+                    team.Add(button.Name, "");
                 }
                 if (button.Name.Contains("form"))
                 {
@@ -149,6 +158,7 @@ namespace futdraft
             Button button = sender as Button;
             string pos = button.Name;
             label1.Text = pos;
+            selectedPlayer = pos;
             if (button.BackgroundImage == empty)
             {
                 generate_players(pos);
@@ -186,7 +196,6 @@ namespace futdraft
 
             //5 random játékos kiválasztása generatedPlayers-be
             Random rnd = new Random();
-            List<Player> generatedPlayers = new List<Player>();
             while (generatedPlayers.Count <= 5)
             {
                 int maxint = availablePlayers.Count();
@@ -205,29 +214,22 @@ namespace futdraft
 
         }
 
-        private void playerSelect1_Click(object sender, EventArgs e)
+        private void playerSelect_Click(object sender, EventArgs e)
         {
+            Button button = sender as Button;
+            int n = Convert.ToInt32(button.Name.Substring(button.Name.Length - 1)) - 1;
 
-        }
+            Control[] controls = this.Controls.Find(selectedPlayer, true);
+            Button playerButton = controls[0] as Button;
+            playerButton.BackgroundImage = (Image)WindowsFormsApp1.Properties.Resources.ResourceManager.GetObject("_" + generatedPlayers[n].Id);
 
-        private void playerSelect2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void playerSelect3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PlayerSelectBox_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void playerSelect5_Click(object sender, EventArgs e)
-        {
-
+            foreach (Control control in this.Controls)
+            {
+                if (control.Name.Contains("Select"))
+                {
+                    control.Visible = false;
+                }
+            }
         }
     }
 }

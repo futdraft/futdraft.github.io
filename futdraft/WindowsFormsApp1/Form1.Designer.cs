@@ -475,7 +475,7 @@ namespace futdraft
             this.playerSelect3.TabIndex = 42;
             this.playerSelect3.UseVisualStyleBackColor = true;
             this.playerSelect3.Visible = false;
-            this.playerSelect3.Click += new System.EventHandler(this.playerSelect3_Click);
+            this.playerSelect3.Click += new System.EventHandler(this.playerSelect_Click);
             // 
             // playerSelect4
             // 
@@ -486,6 +486,7 @@ namespace futdraft
             this.playerSelect4.TabIndex = 43;
             this.playerSelect4.UseVisualStyleBackColor = true;
             this.playerSelect4.Visible = false;
+            this.playerSelect4.Click += new System.EventHandler(this.playerSelect_Click);
             // 
             // playerSelect5
             // 
@@ -496,7 +497,7 @@ namespace futdraft
             this.playerSelect5.TabIndex = 44;
             this.playerSelect5.UseVisualStyleBackColor = true;
             this.playerSelect5.Visible = false;
-            this.playerSelect5.Click += new System.EventHandler(this.playerSelect5_Click);
+            this.playerSelect5.Click += new System.EventHandler(this.playerSelect_Click);
             // 
             // playerSelect2
             // 
@@ -507,7 +508,7 @@ namespace futdraft
             this.playerSelect2.TabIndex = 45;
             this.playerSelect2.UseVisualStyleBackColor = true;
             this.playerSelect2.Visible = false;
-            this.playerSelect2.Click += new System.EventHandler(this.playerSelect2_Click);
+            this.playerSelect2.Click += new System.EventHandler(this.playerSelect_Click);
             // 
             // playerSelect1
             // 
@@ -518,7 +519,7 @@ namespace futdraft
             this.playerSelect1.TabIndex = 46;
             this.playerSelect1.UseVisualStyleBackColor = true;
             this.playerSelect1.Visible = false;
-            this.playerSelect1.Click += new System.EventHandler(this.playerSelect1_Click);
+            this.playerSelect1.Click += new System.EventHandler(this.playerSelect_Click);
             // 
             // PlayerSelectBox
             // 
@@ -528,7 +529,6 @@ namespace futdraft
             this.PlayerSelectBox.TabIndex = 39;
             this.PlayerSelectBox.TabStop = false;
             this.PlayerSelectBox.Visible = false;
-            this.PlayerSelectBox.Click += new System.EventHandler(this.PlayerSelectBox_Click);
             // 
             // button1
             // 
@@ -546,9 +546,9 @@ namespace futdraft
             // playerSelectBackground
             // 
             this.playerSelectBackground.BackColor = System.Drawing.Color.Black;
-            this.playerSelectBackground.Location = new System.Drawing.Point(-6, -6);
+            this.playerSelectBackground.Location = new System.Drawing.Point(-14, -8);
             this.playerSelectBackground.Name = "playerSelectBackground";
-            this.playerSelectBackground.Size = new System.Drawing.Size(1095, 568);
+            this.playerSelectBackground.Size = new System.Drawing.Size(1121, 582);
             this.playerSelectBackground.TabIndex = 47;
             this.playerSelectBackground.Visible = false;
             // 
