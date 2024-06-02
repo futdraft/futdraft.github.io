@@ -20,8 +20,9 @@ namespace futdraft
         public List<Player> generatedPlayers;
         public List<Player> Players;
         private Image empty;
-        public Dictionary<string, string> team;
+        public Dictionary<string, Player> team;
         public string selectedPlayer;
+        public string selectedPlayer2;
 
         public Form1()
         {
@@ -29,9 +30,10 @@ namespace futdraft
             generatedPlayers = new List<Player>();
             Players = new List<Player>();
             empty = WindowsFormsApp1.Properties.Resources.empty;
-            team = new Dictionary<string, string>();
+            team = new Dictionary<string, Player>();
             selectedPlayer = "";
-    }
+            selectedPlayer2 = "";
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -102,7 +104,7 @@ namespace futdraft
                     button.BackgroundImage = empty;
                     button.BackgroundImageLayout = ImageLayout.Zoom;
                     button.Text = "";
-                    team.Add(button.Name, "");
+                    team.Add(button.Name, null);
                 }
                 if (button.Name.Contains("form"))
                 {
@@ -122,7 +124,7 @@ namespace futdraft
                     button.BackgroundImage = empty;
                     button.BackgroundImageLayout = ImageLayout.Zoom;
                     button.Text = "";
-                    team.Add(button.Name, "");
+                    team.Add(button.Name, null);
                 }
                 if (button.Name.Contains("form"))
                 {
@@ -142,7 +144,7 @@ namespace futdraft
                     button.BackgroundImage = empty;
                     button.BackgroundImageLayout = ImageLayout.Zoom;
                     button.Text = "";
-                    team.Add(button.Name, "");
+                    team.Add(button.Name, null);
                 }
                 if (button.Name.Contains("form"))
                 {
@@ -162,6 +164,35 @@ namespace futdraft
             if (button.BackgroundImage == empty)
             {
                 generate_players(pos);
+            }
+            else
+            {
+                if (selectedPlayer2 == "")
+                {
+                    selectedPlayer2 = selectedPlayer;
+                }
+                else
+                {
+                    Player jatekos1 = team[selectedPlayer];
+                    Player jatekos2 = team[selectedPlayer2];
+
+                    team[selectedPlayer] = jatekos2;
+                    team[selectedPlayer2] = jatekos1;
+
+                    Control[] controls1 = this.Controls.Find(selectedPlayer, true);
+                    Button playerButton1 = controls1[0] as Button;
+
+                    Control[] controls2 = this.Controls.Find(selectedPlayer2, true);
+                    Button playerButton2 = controls2[0] as Button;
+
+                    playerButton1.BackgroundImage = (Image)WindowsFormsApp1.Properties.Resources.ResourceManager.GetObject("_" + jatekos2.Id);
+                    playerButton2.BackgroundImage = (Image)WindowsFormsApp1.Properties.Resources.ResourceManager.GetObject("_" + jatekos1.Id);
+
+                    selectedPlayer = "";
+                    selectedPlayer2 = "";
+                }
+                
+
             }
         }
 
@@ -222,6 +253,7 @@ namespace futdraft
             Control[] controls = this.Controls.Find(selectedPlayer, true);
             Button playerButton = controls[0] as Button;
             playerButton.BackgroundImage = (Image)WindowsFormsApp1.Properties.Resources.ResourceManager.GetObject("_" + generatedPlayers[n].Id);
+            team[selectedPlayer] =generatedPlayers[n];
 
             foreach (Control control in this.Controls)
             {
@@ -230,6 +262,8 @@ namespace futdraft
                     control.Visible = false;
                 }
             }
+            Players.Remove(generatedPlayers[n]);
+            generatedPlayers.Clear();
         }
     }
 }
