@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Máj 30. 10:34
--- Kiszolgáló verziója: 10.4.32-MariaDB
--- PHP verzió: 8.2.12
+-- Host: 127.0.0.1
+-- Generation Time: Jun 03, 2024 at 08:50 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Adatbázis: `futdraft`
+-- Database: `futdraft`
 --
 CREATE DATABASE IF NOT EXISTS `futdraft` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `futdraft`;
@@ -26,7 +26,7 @@ USE `futdraft`;
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `players`
+-- Table structure for table `players`
 --
 
 CREATE TABLE `players` (
@@ -40,7 +40,7 @@ CREATE TABLE `players` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- A tábla adatainak kiíratása `players`
+-- Dumping data for table `players`
 --
 
 INSERT INTO `players` (`id`, `name`, `ovr`, `pos`, `league`, `nation`, `team`) VALUES
@@ -73,14 +73,35 @@ INSERT INTO `players` (`id`, `name`, `ovr`, `pos`, `league`, `nation`, `team`) V
 (27, 'Joao Cancelo', 95, 'LB;LWB;RB', 'Laliga', 'PRT', 'FC Barcelona'),
 (28, 'Rafael Leao', 93, 'LW;LM;ST', 'Serie A', 'PRT', 'AC Milan'),
 (29, 'Paulo Dybala', 96, 'ST; CAM', 'Serie A', 'ARG', 'Roma'),
-(30, 'Victor Oshimen', 95, 'ST', 'Serie A', 'NIG', 'Napoli');
+(30, 'Victor Oshimen', 95, 'ST', 'Serie A', 'NIG', 'Napoli'),
+(31, 'Renato Sanchez', 94, 'CM;RM', 'Serie A', 'PRT', 'Roma'),
+(32, 'Anthony Martial', 94, 'ST;LW;LM', 'Premier League', 'FRA', 'Manchester United'),
+(33, 'Thiago Alcantara', 94, 'CM', 'Premier League', 'ESP', 'Liverpool'),
+(34, 'Marco Reus', 96, 'CAM;LW;LM;ST', 'Bundesliga', 'GER', 'Dortmund'),
+(35, 'Alessandro Bastoni', 96, 'CB', 'Serie A', 'ITA', 'Inter'),
+(36, 'Ruben Dias', 95, 'CB', 'Premier League', 'PRT', 'Manchester City'),
+(37, 'Sergio Ramos', 95, 'CB', 'Laliga', 'ESP', 'Sevilla'),
+(38, 'Thiago Silva', 95, 'CB', 'Premier League', 'BRA', 'Chelsea'),
+(39, 'Paolo Maldini', 94, 'CB;LB', 'Icon', 'ITA', 'Icon'),
+(40, 'Nemanja Vidic', 94, 'CB', 'Icon', 'SRB', 'Icon'),
+(41, 'Rio Ferdinand', 93, 'CB', 'Icon', 'ENG', 'Icon'),
+(42, 'Ronald Araujo', 93, 'CB;RB', 'Laliga', 'URY', 'Barcelona'),
+(43, 'Nacho Fernández', 93, 'CB;RB;LB', 'Laliga', 'ESP', 'Real Madrid'),
+(44, 'Matthijs De LIgt', 92, 'CB', 'Bundesliga', 'NLD', 'Bayern'),
+(45, 'Dayot Upamecano', 94, 'CB', 'Bundesliga', 'FRA', 'Bayern'),
+(46, 'Zinadine Zidane', 96, 'CM;CAM', 'Icon', 'FRA', 'Icon'),
+(47, 'Jamal Musiala', 95, 'CM;CAM;LM', 'Bundesliga', 'GER', 'Bayern'),
+(48, 'Leon Goretzka', 95, 'CM;CDM', 'Bundesliga', 'GER', 'Bayern'),
+(49, 'Toni Kroos', 94, 'CM;CDM', 'Laliga', 'GER', 'Real Madrid'),
+(50, 'Mo Salah', 95, 'RW;RM', 'Premier League', 'EGY', 'Liverpool'),
+(51, 'Hristo Stoichkov', 94, 'ST;LW;RW', 'Icon', 'BGR', 'Icon');
 
 --
--- Indexek a kiírt táblákhoz
+-- Indexes for dumped tables
 --
 
 --
--- A tábla indexei `players`
+-- Indexes for table `players`
 --
 ALTER TABLE `players`
   ADD PRIMARY KEY (`id`);
