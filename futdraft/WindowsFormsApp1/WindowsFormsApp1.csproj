@@ -178,5 +178,28 @@
     <EmbeddedResource Include="resources\images\29.png" />
     <EmbeddedResource Include="resources\images\30.png" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="resources\images\31.png" />
+    <EmbeddedResource Include="resources\images\32.png" />
+    <EmbeddedResource Include="resources\images\33.png" />
+    <EmbeddedResource Include="resources\images\34.png" />
+    <EmbeddedResource Include="resources\images\35.png" />
+    <EmbeddedResource Include="resources\images\36.png" />
+    <EmbeddedResource Include="resources\images\37.png" />
+    <EmbeddedResource Include="resources\images\38.png" />
+    <EmbeddedResource Include="resources\images\39.png" />
+    <EmbeddedResource Include="resources\images\40.png" />
+    <EmbeddedResource Include="resources\images\41.png" />
+    <EmbeddedResource Include="resources\images\42.png" />
+    <EmbeddedResource Include="resources\images\43.png" />
+    <EmbeddedResource Include="resources\images\44.png" />
+    <EmbeddedResource Include="resources\images\45.png" />
+    <EmbeddedResource Include="resources\images\46.png" />
+    <EmbeddedResource Include="resources\images\47.png" />
+    <EmbeddedResource Include="resources\images\48.png" />
+    <EmbeddedResource Include="resources\images\49.png" />
+    <EmbeddedResource Include="resources\images\50.png" />
+    <EmbeddedResource Include="resources\images\51.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

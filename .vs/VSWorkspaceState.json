@@ -4,8 +4,12 @@
     "\\futdraft",
     "\\futdraft\\futdraft",
     "\\futdraft\\futdraft\\bin",
-    "\\futdraft\\WindowsFormsApp1"
+    "\\futdraft\\WindowsFormsApp1",
+    "\\futdraft\\WindowsFormsApp1\\Properties",
+    "\\futdraft\\WindowsFormsApp1\\resources",
+    "\\futdraft\\WindowsFormsApp1\\resources\\images",
+    "\\images"
   ],
-  "SelectedNode": "\\futdraft\\WindowsFormsApp1\\Form1.Designer.cs",
+  "SelectedNode": "\\futdraft\\WindowsFormsApp1\\WindowsFormsApp1.sln",
   "PreviewInSolutionExplorer": false
 }
