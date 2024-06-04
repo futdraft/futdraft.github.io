@@ -66,16 +66,33 @@ namespace futdraft
             this.st5b = new System.Windows.Forms.Button();
             this.rw5b = new System.Windows.Forms.Button();
             this.lw5b = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.playerSelect3 = new System.Windows.Forms.Button();
             this.playerSelect4 = new System.Windows.Forms.Button();
             this.playerSelect5 = new System.Windows.Forms.Button();
             this.playerSelect2 = new System.Windows.Forms.Button();
             this.playerSelect1 = new System.Windows.Forms.Button();
             this.PlayerSelectBox = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.playerSelectBackground = new System.Windows.Forms.Panel();
+            this.ChemLabel1 = new System.Windows.Forms.Label();
+            this.totalChemistry = new System.Windows.Forms.Label();
+            this.ChemLabel2 = new System.Windows.Forms.Label();
+            this.ChemLabel3 = new System.Windows.Forms.Label();
+            this.ChemLabel4 = new System.Windows.Forms.Label();
+            this.posChemistry = new System.Windows.Forms.Label();
+            this.ChemLabel5 = new System.Windows.Forms.Label();
+            this.nationChemisty = new System.Windows.Forms.Label();
+            this.ChemLabel6 = new System.Windows.Forms.Label();
+            this.leagueChemistry = new System.Windows.Forms.Label();
+            this.ChemLabel7 = new System.Windows.Forms.Label();
+            this.teamChemistry = new System.Windows.Forms.Label();
+            this.sub1 = new System.Windows.Forms.Button();
+            this.sub3 = new System.Windows.Forms.Button();
+            this.sub5 = new System.Windows.Forms.Button();
+            this.sub7 = new System.Windows.Forms.Button();
+            this.sub2 = new System.Windows.Forms.Button();
+            this.sub4 = new System.Windows.Forms.Button();
+            this.sub6 = new System.Windows.Forms.Button();
+            this.sub8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PlayerSelectBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -448,24 +465,6 @@ namespace futdraft
             this.lw5b.UseVisualStyleBackColor = true;
             this.lw5b.Click += new System.EventHandler(this.button_clicked);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "label1";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(985, 43);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 113);
-            this.button2.TabIndex = 41;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // playerSelect3
             // 
             this.playerSelect3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -530,27 +529,186 @@ namespace futdraft
             this.PlayerSelectBox.TabStop = false;
             this.PlayerSelectBox.Visible = false;
             // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.empty;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(935, 413);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 113);
-            this.button1.TabIndex = 40;
-            this.button1.Text = "button2";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
-            // 
             // playerSelectBackground
             // 
             this.playerSelectBackground.BackColor = System.Drawing.Color.Black;
-            this.playerSelectBackground.Location = new System.Drawing.Point(-14, -8);
+            this.playerSelectBackground.Location = new System.Drawing.Point(-10, -9);
             this.playerSelectBackground.Name = "playerSelectBackground";
-            this.playerSelectBackground.Size = new System.Drawing.Size(1121, 582);
+            this.playerSelectBackground.Size = new System.Drawing.Size(1099, 571);
             this.playerSelectBackground.TabIndex = 47;
             this.playerSelectBackground.Visible = false;
+            // 
+            // ChemLabel1
+            // 
+            this.ChemLabel1.AutoSize = true;
+            this.ChemLabel1.Location = new System.Drawing.Point(877, 43);
+            this.ChemLabel1.Name = "ChemLabel1";
+            this.ChemLabel1.Size = new System.Drawing.Size(57, 13);
+            this.ChemLabel1.TabIndex = 48;
+            this.ChemLabel1.Text = "Összhang:";
+            // 
+            // totalChemistry
+            // 
+            this.totalChemistry.AutoSize = true;
+            this.totalChemistry.Location = new System.Drawing.Point(937, 43);
+            this.totalChemistry.Name = "totalChemistry";
+            this.totalChemistry.Size = new System.Drawing.Size(13, 13);
+            this.totalChemistry.TabIndex = 49;
+            this.totalChemistry.Text = "0";
+            // 
+            // ChemLabel2
+            // 
+            this.ChemLabel2.AutoSize = true;
+            this.ChemLabel2.Location = new System.Drawing.Point(956, 43);
+            this.ChemLabel2.Name = "ChemLabel2";
+            this.ChemLabel2.Size = new System.Drawing.Size(27, 13);
+            this.ChemLabel2.TabIndex = 50;
+            this.ChemLabel2.Text = "/ 52";
+            // 
+            // ChemLabel3
+            // 
+            this.ChemLabel3.AutoSize = true;
+            this.ChemLabel3.Location = new System.Drawing.Point(877, 81);
+            this.ChemLabel3.Name = "ChemLabel3";
+            this.ChemLabel3.Size = new System.Drawing.Size(149, 13);
+            this.ChemLabel3.TabIndex = 51;
+            this.ChemLabel3.Text = "Jó pozícióban lévő játékosok:";
+            // 
+            // ChemLabel4
+            // 
+            this.ChemLabel4.AutoSize = true;
+            this.ChemLabel4.Location = new System.Drawing.Point(1044, 81);
+            this.ChemLabel4.Name = "ChemLabel4";
+            this.ChemLabel4.Size = new System.Drawing.Size(27, 13);
+            this.ChemLabel4.TabIndex = 53;
+            this.ChemLabel4.Text = "/ 22";
+            // 
+            // posChemistry
+            // 
+            this.posChemistry.AutoSize = true;
+            this.posChemistry.Location = new System.Drawing.Point(1025, 81);
+            this.posChemistry.Name = "posChemistry";
+            this.posChemistry.Size = new System.Drawing.Size(13, 13);
+            this.posChemistry.TabIndex = 52;
+            this.posChemistry.Text = "0";
+            // 
+            // ChemLabel5
+            // 
+            this.ChemLabel5.AutoSize = true;
+            this.ChemLabel5.Location = new System.Drawing.Point(877, 121);
+            this.ChemLabel5.Name = "ChemLabel5";
+            this.ChemLabel5.Size = new System.Drawing.Size(144, 13);
+            this.ChemLabel5.TabIndex = 54;
+            this.ChemLabel5.Text = "Játékosok azonos országból:";
+            // 
+            // nationChemisty
+            // 
+            this.nationChemisty.AutoSize = true;
+            this.nationChemisty.Location = new System.Drawing.Point(1025, 121);
+            this.nationChemisty.Name = "nationChemisty";
+            this.nationChemisty.Size = new System.Drawing.Size(13, 13);
+            this.nationChemisty.TabIndex = 55;
+            this.nationChemisty.Text = "0";
+            // 
+            // ChemLabel6
+            // 
+            this.ChemLabel6.AutoSize = true;
+            this.ChemLabel6.Location = new System.Drawing.Point(877, 153);
+            this.ChemLabel6.Name = "ChemLabel6";
+            this.ChemLabel6.Size = new System.Drawing.Size(129, 13);
+            this.ChemLabel6.TabIndex = 56;
+            this.ChemLabel6.Text = "Játékosok azonos ligából:";
+            // 
+            // leagueChemistry
+            // 
+            this.leagueChemistry.AutoSize = true;
+            this.leagueChemistry.Location = new System.Drawing.Point(1025, 153);
+            this.leagueChemistry.Name = "leagueChemistry";
+            this.leagueChemistry.Size = new System.Drawing.Size(13, 13);
+            this.leagueChemistry.TabIndex = 57;
+            this.leagueChemistry.Text = "0";
+            // 
+            // ChemLabel7
+            // 
+            this.ChemLabel7.AutoSize = true;
+            this.ChemLabel7.Location = new System.Drawing.Point(877, 184);
+            this.ChemLabel7.Name = "ChemLabel7";
+            this.ChemLabel7.Size = new System.Drawing.Size(145, 13);
+            this.ChemLabel7.TabIndex = 58;
+            this.ChemLabel7.Text = "Játékosok azonos csapatból:";
+            // 
+            // teamChemistry
+            // 
+            this.teamChemistry.AutoSize = true;
+            this.teamChemistry.Location = new System.Drawing.Point(1025, 184);
+            this.teamChemistry.Name = "teamChemistry";
+            this.teamChemistry.Size = new System.Drawing.Size(13, 13);
+            this.teamChemistry.TabIndex = 59;
+            this.teamChemistry.Text = "0";
+            // 
+            // sub1
+            // 
+            this.sub1.Location = new System.Drawing.Point(12, 12);
+            this.sub1.Name = "sub1";
+            this.sub1.Size = new System.Drawing.Size(86, 113);
+            this.sub1.TabIndex = 60;
+            this.sub1.UseVisualStyleBackColor = true;
+            // 
+            // sub3
+            // 
+            this.sub3.Location = new System.Drawing.Point(12, 153);
+            this.sub3.Name = "sub3";
+            this.sub3.Size = new System.Drawing.Size(86, 113);
+            this.sub3.TabIndex = 61;
+            this.sub3.UseVisualStyleBackColor = true;
+            // 
+            // sub5
+            // 
+            this.sub5.Location = new System.Drawing.Point(12, 293);
+            this.sub5.Name = "sub5";
+            this.sub5.Size = new System.Drawing.Size(86, 113);
+            this.sub5.TabIndex = 62;
+            this.sub5.UseVisualStyleBackColor = true;
+            // 
+            // sub7
+            // 
+            this.sub7.Location = new System.Drawing.Point(12, 431);
+            this.sub7.Name = "sub7";
+            this.sub7.Size = new System.Drawing.Size(86, 113);
+            this.sub7.TabIndex = 63;
+            this.sub7.UseVisualStyleBackColor = true;
+            // 
+            // sub2
+            // 
+            this.sub2.Location = new System.Drawing.Point(123, 12);
+            this.sub2.Name = "sub2";
+            this.sub2.Size = new System.Drawing.Size(86, 113);
+            this.sub2.TabIndex = 64;
+            this.sub2.UseVisualStyleBackColor = true;
+            // 
+            // sub4
+            // 
+            this.sub4.Location = new System.Drawing.Point(123, 153);
+            this.sub4.Name = "sub4";
+            this.sub4.Size = new System.Drawing.Size(86, 113);
+            this.sub4.TabIndex = 65;
+            this.sub4.UseVisualStyleBackColor = true;
+            // 
+            // sub6
+            // 
+            this.sub6.Location = new System.Drawing.Point(123, 293);
+            this.sub6.Name = "sub6";
+            this.sub6.Size = new System.Drawing.Size(86, 113);
+            this.sub6.TabIndex = 66;
+            this.sub6.UseVisualStyleBackColor = true;
+            // 
+            // sub8
+            // 
+            this.sub8.Location = new System.Drawing.Point(123, 432);
+            this.sub8.Name = "sub8";
+            this.sub8.Size = new System.Drawing.Size(86, 113);
+            this.sub8.TabIndex = 67;
+            this.sub8.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -564,9 +722,26 @@ namespace futdraft
             this.Controls.Add(this.playerSelect3);
             this.Controls.Add(this.PlayerSelectBox);
             this.Controls.Add(this.playerSelectBackground);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.sub8);
+            this.Controls.Add(this.sub6);
+            this.Controls.Add(this.sub4);
+            this.Controls.Add(this.sub2);
+            this.Controls.Add(this.sub7);
+            this.Controls.Add(this.sub5);
+            this.Controls.Add(this.sub3);
+            this.Controls.Add(this.sub1);
+            this.Controls.Add(this.teamChemistry);
+            this.Controls.Add(this.ChemLabel7);
+            this.Controls.Add(this.leagueChemistry);
+            this.Controls.Add(this.ChemLabel6);
+            this.Controls.Add(this.nationChemisty);
+            this.Controls.Add(this.ChemLabel5);
+            this.Controls.Add(this.ChemLabel4);
+            this.Controls.Add(this.posChemistry);
+            this.Controls.Add(this.ChemLabel3);
+            this.Controls.Add(this.ChemLabel2);
+            this.Controls.Add(this.totalChemistry);
+            this.Controls.Add(this.ChemLabel1);
             this.Controls.Add(this.lw5b);
             this.Controls.Add(this.rw5b);
             this.Controls.Add(this.st5b);
@@ -652,16 +827,33 @@ namespace futdraft
         private System.Windows.Forms.Button st5b;
         private System.Windows.Forms.Button rw5b;
         private System.Windows.Forms.Button lw5b;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox PlayerSelectBox;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button playerSelect3;
         private System.Windows.Forms.Button playerSelect4;
         private System.Windows.Forms.Button playerSelect5;
         private System.Windows.Forms.Button playerSelect2;
         private System.Windows.Forms.Button playerSelect1;
         private System.Windows.Forms.Panel playerSelectBackground;
+        private System.Windows.Forms.Label ChemLabel1;
+        private System.Windows.Forms.Label totalChemistry;
+        private System.Windows.Forms.Label ChemLabel2;
+        private System.Windows.Forms.Label ChemLabel3;
+        private System.Windows.Forms.Label ChemLabel4;
+        private System.Windows.Forms.Label posChemistry;
+        private System.Windows.Forms.Label ChemLabel5;
+        private System.Windows.Forms.Label nationChemisty;
+        private System.Windows.Forms.Label ChemLabel6;
+        private System.Windows.Forms.Label leagueChemistry;
+        private System.Windows.Forms.Label ChemLabel7;
+        private System.Windows.Forms.Label teamChemistry;
+        private System.Windows.Forms.Button sub1;
+        private System.Windows.Forms.Button sub3;
+        private System.Windows.Forms.Button sub5;
+        private System.Windows.Forms.Button sub7;
+        private System.Windows.Forms.Button sub2;
+        private System.Windows.Forms.Button sub4;
+        private System.Windows.Forms.Button sub6;
+        private System.Windows.Forms.Button sub8;
     }
 }
 

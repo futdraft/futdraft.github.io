@@ -65,6 +65,13 @@ namespace futdraft
                     button.Visible = false;
                 }
             }
+            foreach (var label in this.Controls.OfType<Label>())
+            {
+                if (label.Name.Contains("Chem"))
+                {
+                    label.Visible = false;
+                }
+            }
         }
         public class Player
         {
@@ -111,6 +118,13 @@ namespace futdraft
                     button.Visible = false;
                 }
             }
+            foreach (var label in this.Controls.OfType<Label>())
+            {
+                if (label.Name.Contains("Chem"))
+                {
+                    label.Visible = true;
+                }
+            }
             formationSelect.Visible = false;
         }
 
@@ -129,6 +143,13 @@ namespace futdraft
                 if (button.Name.Contains("form"))
                 {
                     button.Visible = false;
+                }
+            }
+            foreach (var label in this.Controls.OfType<Label>())
+            {
+                if (label.Name.Contains("Chem"))
+                {
+                    label.Visible = true;
                 }
             }
             formationSelect.Visible = false;
@@ -152,6 +173,13 @@ namespace futdraft
                 }
 
             }
+            foreach (var label in this.Controls.OfType<Label>())
+            {
+                if (label.Name.Contains("Chem"))
+                {
+                    label.Visible = true;
+                }
+            }
             formationSelect.Visible = false;
         }
 
@@ -159,7 +187,6 @@ namespace futdraft
         {
             Button button = sender as Button;
             string pos = button.Name;
-            label1.Text = pos;
             selectedPlayer = pos;
             if (button.BackgroundImage == empty)
             {
