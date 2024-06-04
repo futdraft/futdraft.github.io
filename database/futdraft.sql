@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 03, 2024 at 08:50 PM
+-- Generation Time: Jun 04, 2024 at 07:46 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -44,7 +44,7 @@ CREATE TABLE `players` (
 --
 
 INSERT INTO `players` (`id`, `name`, `ovr`, `pos`, `league`, `nation`, `team`) VALUES
-(1, 'Kékesi', 94, 'GK', 'Premier League', 'HUN', 'Newcastle United'),
+(1, 'Kékesi', 94, 'GK', 'Neumann', 'HUN', 'Neumann'),
 (2, 'Erling Haaland', 97, 'ST', 'Premier League', 'NOR', 'Manchester City'),
 (3, 'Kylian Mbappé', 97, 'ST;LW', 'Ligue 1', 'FRA', 'Paris SG'),
 (4, 'Virgil Van Dijk', 97, 'CB', 'Premier League', 'NLD', 'Liverpool'),
@@ -85,7 +85,7 @@ INSERT INTO `players` (`id`, `name`, `ovr`, `pos`, `league`, `nation`, `team`) V
 (39, 'Paolo Maldini', 94, 'CB;LB', 'Icon', 'ITA', 'Icon'),
 (40, 'Nemanja Vidic', 94, 'CB', 'Icon', 'SRB', 'Icon'),
 (41, 'Rio Ferdinand', 93, 'CB', 'Icon', 'ENG', 'Icon'),
-(42, 'Ronald Araujo', 93, 'CB;RB', 'Laliga', 'URY', 'Barcelona'),
+(42, 'Ronald Araujo', 93, 'CB;RB', 'Laliga', 'URY', 'FC Barcelona'),
 (43, 'Nacho Fernández', 93, 'CB;RB;LB', 'Laliga', 'ESP', 'Real Madrid'),
 (44, 'Matthijs De LIgt', 92, 'CB', 'Bundesliga', 'NLD', 'Bayern'),
 (45, 'Dayot Upamecano', 94, 'CB', 'Bundesliga', 'FRA', 'Bayern'),
@@ -94,7 +94,37 @@ INSERT INTO `players` (`id`, `name`, `ovr`, `pos`, `league`, `nation`, `team`) V
 (48, 'Leon Goretzka', 95, 'CM;CDM', 'Bundesliga', 'GER', 'Bayern'),
 (49, 'Toni Kroos', 94, 'CM;CDM', 'Laliga', 'GER', 'Real Madrid'),
 (50, 'Mo Salah', 95, 'RW;RM', 'Premier League', 'EGY', 'Liverpool'),
-(51, 'Hristo Stoichkov', 94, 'ST;LW;RW', 'Icon', 'BGR', 'Icon');
+(51, 'Hristo Stoichkov', 94, 'ST;LW;RW', 'Icon', 'BGR', 'Icon'),
+(52, 'Cafu', 94, 'RB;RWB;RM', 'Icon', 'BRA', 'Icon'),
+(53, 'Kai Havertz', 94, 'CM;CAM;ST;LB', 'Premier League', 'GER', 'Arsenal'),
+(54, 'Alphonso Davies', 89, 'LB;LM;LWB;LW', 'Bundesliga', 'CAN', 'Bayern'),
+(55, 'Rúben Neves', 87, 'CDM;CM', 'Saudi League', 'PRT', 'Al Hilal'),
+(56, 'Kalidou Koulibaly', 94, 'CB', 'Saudi League', 'SEN', 'Al Hilal'),
+(57, 'Andrea Pirlo', 94, 'CM;CDM', 'Icon', 'ITA', 'Icon'),
+(58, 'Patrick Vieira', 93, 'CM;CDM', 'Icon', 'FRA', 'Icon'),
+(59, 'Joshua KImmich', 92, 'CM;CDM;RB', 'Bundesliga', 'GER', 'Bayern'),
+(60, 'Kobbie Mainoo', 92, 'CM;CDM;CAM', 'Premier League', 'ENG', 'Manchester United'),
+(61, 'Steven Gerrard', 91, 'CM;CDM', 'Icon', 'ENG', 'Icon'),
+(62, 'Aurélien Tchouaméni', 91, 'CM;CDM;CB', 'Laliga', 'FRA', 'Real Madrid'),
+(63, 'Clarence Seedorf', 90, 'CM;CDM;RM', 'Icon', 'NLD', 'Icon'),
+(64, 'Aaron Wan-Bissaka', 92, 'RB;RWB;CB', 'Premier League', 'ENG', 'Machester United'),
+(65, 'Ferenc Puskás', 96, 'ST', 'Icon', 'HUN', 'Icon'),
+(66, 'Gianluca Zambrotta', 91, 'LB;RB;RWB', 'Icon', 'ITA', 'Icon'),
+(67, 'Philip Lahm', 89, 'LB;RB;RWB;CDM', 'Icon', 'GER', 'Icon'),
+(68, 'Thiery Henry', 94, 'ST;LW', 'Icon', 'FRA', 'Icon'),
+(69, 'Fülöp', 96, 'RW;RM', 'Neumann', 'HUN', 'Neumann'),
+(70, 'Jairzinho', 94, 'RW;RM;ST', 'Icon', 'BRA', 'Icon'),
+(71, 'Cole Palmer', 91, 'CAM;RW;CM', 'Premier League', 'ENG', 'Chelsea'),
+(72, 'Phil Foden', 94, 'CAM;RW;LW;LM', 'Premier League', 'ENG', 'Manchester City'),
+(73, 'Kaká', 93, 'CAM;RW;LW;ST', 'Icon', 'BRA', 'Icon'),
+(74, 'Raphinha', 93, 'RW;RM', 'Laliga', 'BRA', 'FC Barcelona'),
+(75, 'Leroy Sané', 93, 'RW;RM;LM', 'Bundesliga', 'GER', 'Bayern'),
+(76, 'Jamie Bynoe-Gittens', 93, 'LW;LM;RW;RM', 'Bundesliga', 'ENG', 'Dortmund'),
+(77, 'Andriy Shevchenko', 91, 'ST;LW', 'Icon', 'UKR', 'Icon'),
+(78, 'David Beckham', 91, 'RM;RW;CM', 'Icon', 'ENG', 'Icon'),
+(79, 'Frenkie De Jong', 93, 'CM', 'Laliga', 'NLD', 'FC Barcelona'),
+(80, 'Pablo Gavi', 88, 'CM;CAM;LW', 'Laliga', 'ESP', 'FC Barcelona'),
+(81, 'Pedri', 92, 'CM;CAM', 'Laliga', 'ESP', 'FC Barcelona');
 
 --
 -- Indexes for dumped tables
