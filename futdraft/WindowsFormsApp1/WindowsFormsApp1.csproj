@@ -203,5 +203,40 @@
   <ItemGroup>
     <EmbeddedResource Include="resources\images\1.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="resources\images\52.png" />
+    <EmbeddedResource Include="resources\images\53.png" />
+    <EmbeddedResource Include="resources\images\54.png" />
+    <EmbeddedResource Include="resources\images\55.png" />
+    <EmbeddedResource Include="resources\images\56.png" />
+    <EmbeddedResource Include="resources\images\57.png" />
+    <EmbeddedResource Include="resources\images\58.png" />
+    <EmbeddedResource Include="resources\images\59.png" />
+    <EmbeddedResource Include="resources\images\60.png" />
+    <EmbeddedResource Include="resources\images\61.png" />
+    <EmbeddedResource Include="resources\images\62.png" />
+    <EmbeddedResource Include="resources\images\63.png" />
+    <EmbeddedResource Include="resources\images\64.png" />
+    <EmbeddedResource Include="resources\images\65.png" />
+    <EmbeddedResource Include="resources\images\66.png" />
+    <EmbeddedResource Include="resources\images\67.png" />
+    <EmbeddedResource Include="resources\images\68.png" />
+    <EmbeddedResource Include="resources\images\69.png" />
+    <EmbeddedResource Include="resources\images\websitebackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="resources\images\70.png" />
+    <EmbeddedResource Include="resources\images\71.png" />
+    <EmbeddedResource Include="resources\images\72.png" />
+    <EmbeddedResource Include="resources\images\73.png" />
+    <EmbeddedResource Include="resources\images\74.png" />
+    <EmbeddedResource Include="resources\images\75.png" />
+    <EmbeddedResource Include="resources\images\76.png" />
+    <EmbeddedResource Include="resources\images\77.png" />
+    <EmbeddedResource Include="resources\images\78.png" />
+    <EmbeddedResource Include="resources\images\79.png" />
+    <EmbeddedResource Include="resources\images\80.png" />
+    <EmbeddedResource Include="resources\images\81.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

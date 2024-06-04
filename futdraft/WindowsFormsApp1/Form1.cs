@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using static futdraft.Form1;
 
 
 namespace futdraft
@@ -109,7 +110,7 @@ namespace futdraft
         {
             foreach (var button in this.Controls.OfType<Button>())
             {
-                if (button.Name.Contains("5b") || button.Name.Contains("sub"))
+                if (button.Name.Contains("5b") && !button.Name.Contains("form") || button.Name.Contains("sub") && !button.Name.Contains("form"))
                 {
                     button.Visible = true;
                     button.BackgroundImage = empty;
@@ -136,7 +137,7 @@ namespace futdraft
         {
             foreach (var button in this.Controls.OfType<Button>())
             {
-                if (button.Name.Contains("4b") || button.Name.Contains("sub"))
+                if (button.Name.Contains("4b") && !button.Name.Contains("form") || button.Name.Contains("sub") && !button.Name.Contains("form"))
                 {
                     button.Visible = true;
                     button.BackgroundImage = empty;
@@ -163,7 +164,7 @@ namespace futdraft
         {
             foreach (var button in this.Controls.OfType<Button>())
             {
-                if (button.Name.Contains("3b") || button.Name.Contains("sub"))
+                if (button.Name.Contains("3b") && !button.Name.Contains("form") || button.Name.Contains("sub") && !button.Name.Contains("form"))
                 {
                     button.Visible = true;
                     button.BackgroundImage = empty;
@@ -223,13 +224,18 @@ namespace futdraft
                     selectedPlayer2 = "";
                 }
             }
+
+            starting11.Clear();
             foreach (var player in team)
             {
-                if (!player.Key.Contains("sub"))
+                if (!player.Key.Contains("sub") && player.Value != null && !starting11.Keys.ToArray().Contains(player.Key))
                 {
                     starting11.Add(player.Key, player.Value);
-                    CalculateChem();
                 }
+            }
+            if (starting11.Count() != 0)
+            {
+                CalculateChem();
             }
         }
 
@@ -263,7 +269,7 @@ namespace futdraft
             List<Player> availablePlayers = new List<Player>();
             foreach (var player in Players)
             {
-                if (player.Pos.Contains(pos.Substring(0,2).ToUpper()) || pos == "sub")
+                if (player.Pos.Contains(pos.ToUpper()) || pos == "sub")
                 {
                     availablePlayers.Add(player);
                 }
@@ -322,20 +328,62 @@ namespace futdraft
             Dictionary<string, int> nations = new Dictionary<string, int>();
             Dictionary<string, int> leagues = new Dictionary<string, int>();
             Dictionary<string, int> teams = new Dictionary<string, int>();
+            int posChem = 0;
+            string[] forward = new string[] { "LW", "ST", "RW", "CF"};
+            string[] midfield = new string[] { "LM", "CM", "RM", "CAM", "CDM"};
+            string[] back = new string[] { "RWB", "RB", "CB", "LB", "LWB"};
+            string[] gk = new string[] { "GK" };
 
             foreach (var player in starting11)
             {
-                if (!nations.ContainsKey(player.Value.Nation))
+                if (!nations.ContainsKey(player.Value.Nation) || nations.Count() == 0)
                 {
                     nations.Add(player.Value.Nation, 0);
                 }
-                if (leagues.ContainsKey(player.Value.Nation))
+                if (!leagues.ContainsKey(player.Value.League) || leagues.Count() == 0)
                 {
                     leagues.Add(player.Value.League, 0);
                 }
-                if (!teams.ContainsKey(player.Value.Nation))
+                if (!teams.ContainsKey(player.Value.Team) || teams.Count() == 0)
                 {
                     teams.Add(player.Value.Team, 0);
+                }
+
+                string pos = player.Key;
+                string[] position = new string[] { "LW", "ST", "RW", "CF", "LM", "CM", "RM", "CAM", "CDM", "RWB", "RB", "CB", "LB", "LWB" };
+                if (forward.Contains(pos.Substring(0, 2)))
+                {
+                    position = forward;
+                }
+                if (midfield.Contains(pos.Substring(0, 2)))
+                {
+                    position = midfield;
+                }
+                if (back.Contains(pos.Substring(0, 2)))
+                {
+                    position = back;
+                }
+                if (gk.Contains(pos.Substring(0, 2)))
+                {
+                    position = gk;
+                }
+
+
+                string[] playerPositions = player.Value.Pos.Split(';');
+                if (playerPositions.Intersect(position).Any())
+                {
+                    posChem++;
+                }
+
+                string input = pos;
+                string pattern = @"\d";
+
+                // Replace all matches with an empty string
+                pos = Regex.Replace(input, pattern, "");
+                pos = pos.Remove(pos.Length - 1);
+                if (player.Value.Pos.Split(';').Contains(pos.ToUpper()))
+                {
+                    posChem++;
                 }
             }
 
@@ -355,33 +403,47 @@ namespace futdraft
                 }
             }
 
-            foreach (var nation in nations)
+            foreach (var nation in nations.Keys.ToArray())
             {
-                if (nation.Value > 3)
+                if (nations[nation] <= 5)
                 {
-                    nations[nation.Key] = 0;
+                    nations[nation] = 0;
                 }
             }
-            foreach (var league in leagues)
+            foreach (var league in leagues.Keys.ToArray())
             {
-                if (league.Value > 3)
+                if (leagues[league] <= 5)
                 {
-                    leagues[league.Key] = 0;
+                    leagues[league] = 0;
                 }
             }
-            foreach (var team in teams)
+            foreach (var team in teams.Keys.ToArray())
             {
-                if (team.Value > 3)
+                if (teams[team] <= 5)
                 {
-                    teams[team.Key] = 0;
+                    teams[team] = 0;
                 }
             }
-            nations.Sum();
-            totalChemistry.Text = "0";
-            posChemistry.Text = "";
-            nationChemisty.Text = "0";
-            leagueChemistry.Text = "0";
-            teamChemistry.Text = "0";
+
+            Chemistry = nations.Values.Sum() + leagues.Values.Sum() + teams.Values.Sum() + posChem;
+            totalChemistry.Text = Convert.ToString(Chemistry);
+            posChemistry.Text = Convert.ToString(posChem);
+            nationChemisty.Text = Convert.ToString(nations.Values.Sum());
+            leagueChemistry.Text = Convert.ToString(leagues.Values.Sum());
+            teamChemistry.Text = Convert.ToString(teams.Values.Sum());
+
+            OVR.Text = Convert.ToString(starting11.Values.Average(player => player.Ovr));
+            Score.Text = Convert.ToString(Chemistry + starting11.Values.Average(player => player.Ovr));
+
+            if (team.Values.All(value => value != null))
+            {
+                Submit.Visible = true;
+            }
+        }
+
+        private void Submit_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

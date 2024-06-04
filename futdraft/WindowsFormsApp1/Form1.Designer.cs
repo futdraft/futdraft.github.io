@@ -75,7 +75,6 @@ namespace futdraft
             this.playerSelectBackground = new System.Windows.Forms.Panel();
             this.ChemLabel1 = new System.Windows.Forms.Label();
             this.totalChemistry = new System.Windows.Forms.Label();
-            this.ChemLabel2 = new System.Windows.Forms.Label();
             this.ChemLabel3 = new System.Windows.Forms.Label();
             this.ChemLabel4 = new System.Windows.Forms.Label();
             this.posChemistry = new System.Windows.Forms.Label();
@@ -93,6 +92,11 @@ namespace futdraft
             this.sub4 = new System.Windows.Forms.Button();
             this.sub6 = new System.Windows.Forms.Button();
             this.sub8 = new System.Windows.Forms.Button();
+            this.ChemLabel8 = new System.Windows.Forms.Label();
+            this.OVR = new System.Windows.Forms.Label();
+            this.ChemLabel9 = new System.Windows.Forms.Label();
+            this.Score = new System.Windows.Forms.Label();
+            this.Submit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PlayerSelectBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -534,7 +538,7 @@ namespace futdraft
             this.playerSelectBackground.BackColor = System.Drawing.Color.Black;
             this.playerSelectBackground.Location = new System.Drawing.Point(-10, -9);
             this.playerSelectBackground.Name = "playerSelectBackground";
-            this.playerSelectBackground.Size = new System.Drawing.Size(1099, 571);
+            this.playerSelectBackground.Size = new System.Drawing.Size(1099, 565);
             this.playerSelectBackground.TabIndex = 47;
             this.playerSelectBackground.Visible = false;
             // 
@@ -555,15 +559,6 @@ namespace futdraft
             this.totalChemistry.Size = new System.Drawing.Size(13, 13);
             this.totalChemistry.TabIndex = 49;
             this.totalChemistry.Text = "0";
-            // 
-            // ChemLabel2
-            // 
-            this.ChemLabel2.AutoSize = true;
-            this.ChemLabel2.Location = new System.Drawing.Point(956, 43);
-            this.ChemLabel2.Name = "ChemLabel2";
-            this.ChemLabel2.Size = new System.Drawing.Size(27, 13);
-            this.ChemLabel2.TabIndex = 50;
-            this.ChemLabel2.Text = "/ 52";
             // 
             // ChemLabel3
             // 
@@ -718,6 +713,52 @@ namespace futdraft
             this.sub8.UseVisualStyleBackColor = true;
             this.sub8.Click += new System.EventHandler(this.button_clicked);
             // 
+            // ChemLabel8
+            // 
+            this.ChemLabel8.AutoSize = true;
+            this.ChemLabel8.Location = new System.Drawing.Point(984, 253);
+            this.ChemLabel8.Name = "ChemLabel8";
+            this.ChemLabel8.Size = new System.Drawing.Size(33, 13);
+            this.ChemLabel8.TabIndex = 68;
+            this.ChemLabel8.Text = "OVR:";
+            // 
+            // OVR
+            // 
+            this.OVR.AutoSize = true;
+            this.OVR.Location = new System.Drawing.Point(1025, 253);
+            this.OVR.Name = "OVR";
+            this.OVR.Size = new System.Drawing.Size(13, 13);
+            this.OVR.TabIndex = 69;
+            this.OVR.Text = "0";
+            // 
+            // ChemLabel9
+            // 
+            this.ChemLabel9.AutoSize = true;
+            this.ChemLabel9.Location = new System.Drawing.Point(984, 280);
+            this.ChemLabel9.Name = "ChemLabel9";
+            this.ChemLabel9.Size = new System.Drawing.Size(38, 13);
+            this.ChemLabel9.TabIndex = 70;
+            this.ChemLabel9.Text = "Score:";
+            // 
+            // Score
+            // 
+            this.Score.AutoSize = true;
+            this.Score.Location = new System.Drawing.Point(1025, 280);
+            this.Score.Name = "Score";
+            this.Score.Size = new System.Drawing.Size(13, 13);
+            this.Score.TabIndex = 71;
+            this.Score.Text = "0";
+            // 
+            // Submit
+            // 
+            this.Submit.Location = new System.Drawing.Point(977, 304);
+            this.Submit.Name = "Submit";
+            this.Submit.Size = new System.Drawing.Size(94, 23);
+            this.Submit.TabIndex = 72;
+            this.Submit.Text = "Submit Score";
+            this.Submit.UseVisualStyleBackColor = true;
+            this.Submit.Click += new System.EventHandler(this.Submit_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -747,7 +788,6 @@ namespace futdraft
             this.Controls.Add(this.ChemLabel4);
             this.Controls.Add(this.posChemistry);
             this.Controls.Add(this.ChemLabel3);
-            this.Controls.Add(this.ChemLabel2);
             this.Controls.Add(this.totalChemistry);
             this.Controls.Add(this.ChemLabel1);
             this.Controls.Add(this.lw5b);
@@ -787,6 +827,11 @@ namespace futdraft
             this.Controls.Add(this.form4back);
             this.Controls.Add(this.form5back);
             this.Controls.Add(this.formationSelect);
+            this.Controls.Add(this.Score);
+            this.Controls.Add(this.ChemLabel9);
+            this.Controls.Add(this.OVR);
+            this.Controls.Add(this.ChemLabel8);
+            this.Controls.Add(this.Submit);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -844,7 +889,6 @@ namespace futdraft
         private System.Windows.Forms.Panel playerSelectBackground;
         private System.Windows.Forms.Label ChemLabel1;
         private System.Windows.Forms.Label totalChemistry;
-        private System.Windows.Forms.Label ChemLabel2;
         private System.Windows.Forms.Label ChemLabel3;
         private System.Windows.Forms.Label ChemLabel4;
         private System.Windows.Forms.Label posChemistry;
@@ -862,6 +906,11 @@ namespace futdraft
         private System.Windows.Forms.Button sub4;
         private System.Windows.Forms.Button sub6;
         private System.Windows.Forms.Button sub8;
+        private System.Windows.Forms.Label ChemLabel8;
+        private System.Windows.Forms.Label OVR;
+        private System.Windows.Forms.Label ChemLabel9;
+        private System.Windows.Forms.Label Score;
+        private System.Windows.Forms.Button Submit;
     }
 }
 

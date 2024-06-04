@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("futdraft")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa03c7ca8bfed6d657fe942586d9ac90613e8fa6")]
 [assembly: System.Reflection.AssemblyProductAttribute("futdraft")]
 [assembly: System.Reflection.AssemblyTitleAttribute("futdraft")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
