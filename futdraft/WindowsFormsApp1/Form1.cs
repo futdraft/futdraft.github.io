@@ -17,6 +17,8 @@ namespace futdraft
 {
     public partial class Form1 : Form
     {
+        public int Chemistry;
+        public Dictionary<string, Player> starting11;
         public List<Player> generatedPlayers;
         public List<Player> Players;
         private Image empty;
@@ -27,6 +29,8 @@ namespace futdraft
         public Form1()
         {
             InitializeComponent();
+            Chemistry = 0;
+            starting11 = new Dictionary<string, Player>();
             generatedPlayers = new List<Player>();
             Players = new List<Player>();
             empty = WindowsFormsApp1.Properties.Resources.empty;
@@ -218,8 +222,14 @@ namespace futdraft
                     selectedPlayer = "";
                     selectedPlayer2 = "";
                 }
-                
-
+            }
+            foreach (var player in team)
+            {
+                if (!player.Key.Contains("sub"))
+                {
+                    starting11.Add(player.Key, player.Value);
+                    CalculateChem();
+                }
             }
         }
 
@@ -298,6 +308,80 @@ namespace futdraft
             }
             Players.Remove(generatedPlayers[n]);
             generatedPlayers.Clear();
+        }
+
+        private void CalculateChem()
+        {
+            Chemistry = 0;
+            totalChemistry.Text = "0";
+            posChemistry.Text = "0";
+            nationChemisty.Text = "0";
+            leagueChemistry.Text = "0";
+            teamChemistry.Text = "0";
+
+            Dictionary<string, int> nations = new Dictionary<string, int>();
+            Dictionary<string, int> leagues = new Dictionary<string, int>();
+            Dictionary<string, int> teams = new Dictionary<string, int>();
+
+            foreach (var player in starting11)
+            {
+                if (!nations.ContainsKey(player.Value.Nation))
+                {
+                    nations.Add(player.Value.Nation, 0);
+                }
+                if (leagues.ContainsKey(player.Value.Nation))
+                {
+                    leagues.Add(player.Value.League, 0);
+                }
+                if (!teams.ContainsKey(player.Value.Nation))
+                {
+                    teams.Add(player.Value.Team, 0);
+                }
+            }
+
+            foreach (var player in starting11)
+            {
+                if (nations.ContainsKey(player.Value.Nation))
+                {
+                    nations[player.Value.Nation] += 2;
+                }
+                if (leagues.ContainsKey(player.Value.League))
+                {
+                    leagues[player.Value.League] += 2;
+                }
+                if (teams.ContainsKey(player.Value.Team))
+                {
+                    teams[player.Value.Team] += 2;
+                }
+            }
+
+            foreach (var nation in nations)
+            {
+                if (nation.Value > 3)
+                {
+                    nations[nation.Key] = 0;
+                }
+            }
+            foreach (var league in leagues)
+            {
+                if (league.Value > 3)
+                {
+                    leagues[league.Key] = 0;
+                }
+            }
+            foreach (var team in teams)
+            {
+                if (team.Value > 3)
+                {
+                    teams[team.Key] = 0;
+                }
+            }
+            nations.Sum();
+            totalChemistry.Text = "0";
+            posChemistry.Text = "";
+            nationChemisty.Text = "0";
+            leagueChemistry.Text = "0";
+            teamChemistry.Text = "0";
         }
     }
 }
