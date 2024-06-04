@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 03, 2024 at 08:50 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Gép: 127.0.0.1
+-- Létrehozás ideje: 2024. Jún 04. 14:33
+-- Kiszolgáló verziója: 10.4.32-MariaDB
+-- PHP verzió: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `futdraft`
+-- Adatbázis: `futdraft`
 --
 CREATE DATABASE IF NOT EXISTS `futdraft` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `futdraft`;
@@ -26,7 +26,7 @@ USE `futdraft`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `players`
+-- Tábla szerkezet ehhez a táblához `players`
 --
 
 CREATE TABLE `players` (
@@ -40,11 +40,11 @@ CREATE TABLE `players` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `players`
+-- A tábla adatainak kiíratása `players`
 --
 
 INSERT INTO `players` (`id`, `name`, `ovr`, `pos`, `league`, `nation`, `team`) VALUES
-(1, 'Kékesi', 94, 'GK', 'Premier League', 'HUN', 'Newcastle United'),
+(1, 'Kékesi', 94, 'GK', 'Neumann', 'HUN', 'Neumann'),
 (2, 'Erling Haaland', 97, 'ST', 'Premier League', 'NOR', 'Manchester City'),
 (3, 'Kylian Mbappé', 97, 'ST;LW', 'Ligue 1', 'FRA', 'Paris SG'),
 (4, 'Virgil Van Dijk', 97, 'CB', 'Premier League', 'NLD', 'Liverpool'),
@@ -94,14 +94,32 @@ INSERT INTO `players` (`id`, `name`, `ovr`, `pos`, `league`, `nation`, `team`) V
 (48, 'Leon Goretzka', 95, 'CM;CDM', 'Bundesliga', 'GER', 'Bayern'),
 (49, 'Toni Kroos', 94, 'CM;CDM', 'Laliga', 'GER', 'Real Madrid'),
 (50, 'Mo Salah', 95, 'RW;RM', 'Premier League', 'EGY', 'Liverpool'),
-(51, 'Hristo Stoichkov', 94, 'ST;LW;RW', 'Icon', 'BGR', 'Icon');
+(51, 'Hristo Stoichkov', 94, 'ST;LW;RW', 'Icon', 'BGR', 'Icon'),
+(52, 'Cafu', 94, 'RB;RWB;RM', 'Icon', 'BRA', 'Icon'),
+(53, 'Kai Havertz', 94, 'CM;CAM;ST;LB', 'Premier League', 'GER', 'Arsenal'),
+(54, 'Alphonso Davies', 89, 'LB;LM;LWB;LW', 'Bundesliga', 'CAN', 'Bayern'),
+(55, 'Rúben Neves', 87, 'CDM;CM', 'Saudi League', 'PRT', 'Al Hilal'),
+(56, 'Kalidou Koulibaly', 94, 'CB', 'Saudi League', 'SEN', 'Al Hilal'),
+(57, 'Andrea Pirlo', 94, 'CM;CDM', 'Icon', 'ITA', 'Icon'),
+(58, 'Patrick Vieira', 93, 'CM;CDM', 'Icon', 'FRA', 'Icon'),
+(59, 'Joshua KImmich', 92, 'CM;CDM;RB', 'Bundesliga', 'GER', 'Bayern'),
+(60, 'Kobbie Mainoo', 92, 'CM;CDM;CAM', 'Premier League', 'ENG', 'Manchester United'),
+(61, 'Steven Gerrard', 91, 'CM;CDM', 'Icon', 'ENG', 'Icon'),
+(62, 'Aurélien Tchouaméni', 91, 'CM;CDM;CB', 'Laliga', 'FRA', 'Real Madrid'),
+(63, 'Clarence Seedorf', 90, 'CM;CDM;RM', 'Icon', 'NLD', 'Icon'),
+(64, 'Aaron Wan-Bissaka', 92, 'RB;RWB;CB', 'Premier League', 'ENG', 'Machester United'),
+(65, 'Ferenc Puskás', 96, 'ST', 'Icon', 'HUN', 'Icon'),
+(66, 'Gianluca Zambrotta', 91, 'LB;RB;RWB', 'Icon', 'ITA', 'Icon'),
+(67, 'Philip Lahm', 89, 'LB;RB;RWB;CDM', 'Icon', 'GER', 'Icon'),
+(68, 'Thiery Henry', 94, 'ST;LW', 'Icon', 'FRA', 'Icon'),
+(69, 'Fülöp', 96, 'RW;RM', 'Neumann', 'HUN', 'Neumann');
 
 --
--- Indexes for dumped tables
+-- Indexek a kiírt táblákhoz
 --
 
 --
--- Indexes for table `players`
+-- A tábla indexei `players`
 --
 ALTER TABLE `players`
   ADD PRIMARY KEY (`id`);
