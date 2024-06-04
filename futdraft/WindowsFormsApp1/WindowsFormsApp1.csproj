@@ -161,7 +161,6 @@
     <EmbeddedResource Include="resources\images\empty.png" />
     <EmbeddedResource Include="resources\images\Fülöp.png" />
     <EmbeddedResource Include="resources\images\icon.png" />
-    <EmbeddedResource Include="resources\images\kekesi.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\Image1.bmp" />
@@ -200,6 +199,9 @@
     <EmbeddedResource Include="resources\images\49.png" />
     <EmbeddedResource Include="resources\images\50.png" />
     <EmbeddedResource Include="resources\images\51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="resources\images\1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

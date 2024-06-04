@@ -105,7 +105,7 @@ namespace futdraft
         {
             foreach (var button in this.Controls.OfType<Button>())
             {
-                if (button.Name.Contains("5b"))
+                if (button.Name.Contains("5b") || button.Name.Contains("sub"))
                 {
                     button.Visible = true;
                     button.BackgroundImage = empty;
@@ -132,7 +132,7 @@ namespace futdraft
         {
             foreach (var button in this.Controls.OfType<Button>())
             {
-                if (button.Name.Contains("4b"))
+                if (button.Name.Contains("4b") || button.Name.Contains("sub"))
                 {
                     button.Visible = true;
                     button.BackgroundImage = empty;
@@ -159,7 +159,7 @@ namespace futdraft
         {
             foreach (var button in this.Controls.OfType<Button>())
             {
-                if (button.Name.Contains("3b"))
+                if (button.Name.Contains("3b") || button.Name.Contains("sub"))
                 {
                     button.Visible = true;
                     button.BackgroundImage = empty;
@@ -225,14 +225,21 @@ namespace futdraft
 
         public void generate_players(string pos)
         {
-            string input = pos;
+            if (pos.Contains("sub"))
+            {
+                pos = "sub";
+            }
+            else
+            {
+                string input = pos;
 
-            // Define the regex pattern to match all digits
-            string pattern = @"\d";
+                // Define the regex pattern to match all digits
+                string pattern = @"\d";
 
-            // Replace all matches with an empty string
-            pos = Regex.Replace(input, pattern, "");
-            pos = pos.Remove(pos.Length - 1);
+                // Replace all matches with an empty string
+                pos = Regex.Replace(input, pattern, "");
+                pos = pos.Remove(pos.Length - 1);
+            }
 
             foreach (Control control in this.Controls)
             {
@@ -246,7 +253,7 @@ namespace futdraft
             List<Player> availablePlayers = new List<Player>();
             foreach (var player in Players)
             {
-                if (player.Pos.Contains(pos.Substring(0,2).ToUpper()))
+                if (player.Pos.Contains(pos.Substring(0,2).ToUpper()) || pos == "sub")
                 {
                     availablePlayers.Add(player);
                 }

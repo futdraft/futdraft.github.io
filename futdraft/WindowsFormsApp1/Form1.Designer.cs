@@ -653,6 +653,7 @@ namespace futdraft
             this.sub1.Size = new System.Drawing.Size(86, 113);
             this.sub1.TabIndex = 60;
             this.sub1.UseVisualStyleBackColor = true;
+            this.sub1.Click += new System.EventHandler(this.button_clicked);
             // 
             // sub3
             // 
@@ -661,6 +662,7 @@ namespace futdraft
             this.sub3.Size = new System.Drawing.Size(86, 113);
             this.sub3.TabIndex = 61;
             this.sub3.UseVisualStyleBackColor = true;
+            this.sub3.Click += new System.EventHandler(this.button_clicked);
             // 
             // sub5
             // 
@@ -669,6 +671,7 @@ namespace futdraft
             this.sub5.Size = new System.Drawing.Size(86, 113);
             this.sub5.TabIndex = 62;
             this.sub5.UseVisualStyleBackColor = true;
+            this.sub5.Click += new System.EventHandler(this.button_clicked);
             // 
             // sub7
             // 
@@ -677,6 +680,7 @@ namespace futdraft
             this.sub7.Size = new System.Drawing.Size(86, 113);
             this.sub7.TabIndex = 63;
             this.sub7.UseVisualStyleBackColor = true;
+            this.sub7.Click += new System.EventHandler(this.button_clicked);
             // 
             // sub2
             // 
@@ -685,6 +689,7 @@ namespace futdraft
             this.sub2.Size = new System.Drawing.Size(86, 113);
             this.sub2.TabIndex = 64;
             this.sub2.UseVisualStyleBackColor = true;
+            this.sub2.Click += new System.EventHandler(this.button_clicked);
             // 
             // sub4
             // 
@@ -693,6 +698,7 @@ namespace futdraft
             this.sub4.Size = new System.Drawing.Size(86, 113);
             this.sub4.TabIndex = 65;
             this.sub4.UseVisualStyleBackColor = true;
+            this.sub4.Click += new System.EventHandler(this.button_clicked);
             // 
             // sub6
             // 
@@ -701,6 +707,7 @@ namespace futdraft
             this.sub6.Size = new System.Drawing.Size(86, 113);
             this.sub6.TabIndex = 66;
             this.sub6.UseVisualStyleBackColor = true;
+            this.sub6.Click += new System.EventHandler(this.button_clicked);
             // 
             // sub8
             // 
@@ -709,6 +716,7 @@ namespace futdraft
             this.sub8.Size = new System.Drawing.Size(86, 113);
             this.sub8.TabIndex = 67;
             this.sub8.UseVisualStyleBackColor = true;
+            this.sub8.Click += new System.EventHandler(this.button_clicked);
             // 
             // Form1
             // 
