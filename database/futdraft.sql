@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 04, 2024 at 07:46 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Gép: 127.0.0.1
+-- Létrehozás ideje: 2024. Jún 04. 21:56
+-- Kiszolgáló verziója: 10.4.32-MariaDB
+-- PHP verzió: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `futdraft`
+-- Adatbázis: `futdraft`
 --
 CREATE DATABASE IF NOT EXISTS `futdraft` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `futdraft`;
@@ -26,7 +26,19 @@ USE `futdraft`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `players`
+-- Tábla szerkezet ehhez a táblához `leaderboard`
+--
+
+CREATE TABLE `leaderboard` (
+  `Id` int(11) NOT NULL,
+  `Name` tinytext NOT NULL,
+  `Score` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `players`
 --
 
 CREATE TABLE `players` (
@@ -40,7 +52,7 @@ CREATE TABLE `players` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `players`
+-- A tábla adatainak kiíratása `players`
 --
 
 INSERT INTO `players` (`id`, `name`, `ovr`, `pos`, `league`, `nation`, `team`) VALUES
@@ -127,11 +139,17 @@ INSERT INTO `players` (`id`, `name`, `ovr`, `pos`, `league`, `nation`, `team`) V
 (81, 'Pedri', 92, 'CM;CAM', 'Laliga', 'ESP', 'FC Barcelona');
 
 --
--- Indexes for dumped tables
+-- Indexek a kiírt táblákhoz
 --
 
 --
--- Indexes for table `players`
+-- A tábla indexei `leaderboard`
+--
+ALTER TABLE `leaderboard`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- A tábla indexei `players`
 --
 ALTER TABLE `players`
   ADD PRIMARY KEY (`id`);
