@@ -475,7 +475,49 @@ namespace futdraft
 
         private void Submit_Click(object sender, EventArgs e)
         {
+            string name = UserName.Text;
+            int score = int.Parse(Score.Text);
 
+            string id = "0";
+            string kapcs1 = "server=localhost;database=futdraft;user=root;password=;port=3306;";
+            MySqlConnection conn1 = new MySqlConnection(kapcs1);
+            try
+            {
+                conn1.Open();
+
+                string sql = "SELECT MAX(Id) FROM leaderboard";
+                MySqlCommand parancs = new MySqlCommand(sql, conn1);
+                MySqlDataReader eredmeny = parancs.ExecuteReader();
+                while (eredmeny.Read())
+                {
+                    id = Convert.ToString(Convert.ToInt32(eredmeny[0]) + 1);
+                }
+            }
+            catch (Exception hiba)
+            {
+
+            }
+            conn1.Close();
+
+            string kapcs = "server=localhost;database=futdraft;user=root;password=;port=3306;";
+            MySqlConnection conn = new MySqlConnection(kapcs);
+            try
+            {
+                conn.Open();
+                string sql = "INSERT INTO leaderboard VALUES(" + id + ",'" + name + "'," + score + ");";
+                MySqlCommand parancs = new MySqlCommand(sql, conn);
+                parancs.ExecuteNonQuery();
+
+            }
+            catch (Exception hiba)
+            {
+            }
+            conn.Close();
+
+            Submit.Enabled = false;
+            label1.Visible = true;
+            System.Threading.Thread.Sleep(5000);
+            Application.Exit();
         }
     }
 }
