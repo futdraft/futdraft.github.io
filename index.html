@@ -18,6 +18,27 @@
         transform: translate(-50%, -50%);
         width: 100%;
     }
+
+    .centerdiv {
+        width: 500px;
+        height: 200px;
+        position: relative;
+        top: 40%;
+        left: 10%;
+        text-align: center;
+        vertical-align: middle;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    @media only screen and (max-width: 600px) {
+        .centerdiv {
+            position: relative;
+            margin: auto;
+            top: 40;
+            left: 0;
+            width: 400px;
+        }
+    }
 </style>
 
 <body>
@@ -30,17 +51,20 @@
     </nav>
     <div
         style="background-image: url(images/websitebackground.jpg); background-repeat: no-repeat; width: 100%; height: 1080px; background-position-x: 100%; margin-bottom: 0;padding-bottom: 0;">
-        <div class="bg-dark text-white" style="width: 500px; height: 200px; position: relative; top: 40%;left: 10%; text-align: center; vertical-align: middle;">
+        <div class=" text-white centerdiv" >
             <h2 class="center" style="top: 35%;">Ugorj bele csapatépítés világába!</h2>
-            <a class="btn btn-success center" href="#download" style="top: 65%; width: fit-content;">Irány a letöltésekhez!</a>
+            <a class="btn btn-success center" href="#download" style="top: 65%; width: fit-content;">Irány a
+                letöltésekhez!</a>
         </div>
     </div>
     <div style="background-image: url(images/background.jpg);">
-        <div class="container bg-dark text-white" style="height: 1000px;">
+        <div class="container-md bg-dark text-white" style="height: 1000px;">
             <div class="container" style="padding-top: 100px;">
                 <H2>Bemutató a játékhoz</H2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos beatae ad nam aliquid officia facere ipsum in illum, nemo doloribus sequi atque vero, eveniet dicta? Voluptatem quos numquam voluptates eum.</p>
-                
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos beatae ad nam aliquid officia facere
+                    ipsum in illum, nemo doloribus sequi atque vero, eveniet dicta? Voluptatem quos numquam voluptates
+                    eum.</p>
+
                 <br>
 
                 <p id="download" style="height: 200px; color: black; visibility: hidden;">a</p>
