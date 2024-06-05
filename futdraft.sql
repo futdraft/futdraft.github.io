@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Jún 05. 18:04
--- Kiszolgáló verziója: 10.4.32-MariaDB
--- PHP verzió: 8.2.12
+-- Host: 127.0.0.1
+-- Generation Time: Jun 05, 2024 at 09:50 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Adatbázis: `futdraft`
+-- Database: `futdraft`
 --
 CREATE DATABASE IF NOT EXISTS `futdraft` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `futdraft`;
@@ -26,7 +26,7 @@ USE `futdraft`;
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `leaderboard`
+-- Table structure for table `leaderboard`
 --
 
 CREATE TABLE `leaderboard` (
@@ -36,7 +36,7 @@ CREATE TABLE `leaderboard` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- A tábla adatainak kiíratása `leaderboard`
+-- Dumping data for table `leaderboard`
 --
 
 INSERT INTO `leaderboard` (`Id`, `Name`, `Score`) VALUES
@@ -54,7 +54,7 @@ INSERT INTO `leaderboard` (`Id`, `Name`, `Score`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `players`
+-- Table structure for table `players`
 --
 
 CREATE TABLE `players` (
@@ -68,7 +68,7 @@ CREATE TABLE `players` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- A tábla adatainak kiíratása `players`
+-- Dumping data for table `players`
 --
 
 INSERT INTO `players` (`id`, `name`, `ovr`, `pos`, `league`, `nation`, `team`) VALUES
@@ -80,7 +80,7 @@ INSERT INTO `players` (`id`, `name`, `ovr`, `pos`, `league`, `nation`, `team`) V
 (6, 'Jude Bellingham', 97, 'CM;CAM', 'Laliga', 'ENG', 'Real Madrid'),
 (7, 'Kevin De Bruyne', 96, 'CM;CAM', 'Premier League', 'BEL', 'Manchester City'),
 (8, 'Luka Modric', 96, 'CM;CDM', 'Laliga', 'HRV', 'Real Madrid'),
-(9, 'Declan Rice', 96, 'CM;CDM', 'Premier League', 'HRV', 'Real Madrid'),
+(9, 'Declan Rice', 96, 'CM;CDM', 'Premier League', 'ENG', 'Arsenal'),
 (10, 'Cristiano Ronaldo', 96, 'ST', 'Saudi League', 'PRT', 'Al Nassr'),
 (11, 'Ousmane Dembelé', 96, 'RW;RM;LW', 'Ligue 1', 'FRA', 'Paris SG'),
 (12, 'Vitinha', 96, 'CM;CAM', 'Ligue 1', 'PRT', 'Paris SG'),
@@ -152,20 +152,34 @@ INSERT INTO `players` (`id`, `name`, `ovr`, `pos`, `league`, `nation`, `team`) V
 (78, 'David Beckham', 91, 'RM;RW;CM', 'Icon', 'ENG', 'Icon'),
 (79, 'Frenkie De Jong', 93, 'CM', 'Laliga', 'NLD', 'FC Barcelona'),
 (80, 'Pablo Gavi', 88, 'CM;CAM;LW', 'Laliga', 'ESP', 'FC Barcelona'),
-(81, 'Pedri', 92, 'CM;CAM', 'Laliga', 'ESP', 'FC Barcelona');
+(81, 'Pedri', 92, 'CM;CAM', 'Laliga', 'ESP', 'FC Barcelona'),
+(82, 'Luis Suárez', 94, 'ST', 'MLS', 'URY', 'Inter Miami'),
+(83, 'Lionel Messi', 94, 'ST;CAM', 'MLS', 'ARG', 'Inter Miami'),
+(84, 'Sergio Busquets', 93, 'CDM;CM', 'MLS', 'ESP', 'Inter Miami'),
+(85, 'Jordi Alba', 93, 'LB;LWB', 'MLS', 'ESP', 'Inter Miami'),
+(86, 'Jack Grealish', 90, 'LW;LM', 'Premier League', 'ENG', 'Manchester City'),
+(87, 'Darwin Nunez', 90, 'LW;ST', 'Premier League', 'URY', 'Liverpool'),
+(88, 'Hakan Calhanoglu', 90, 'CM;CAM;CDM', 'Serie A', 'TUR', 'Inter'),
+(89, 'Yann Aurel Bisseck', 93, 'CB', 'Serie A', 'GER', 'Inter'),
+(90, 'Nicolo Barella', 90, 'CM;CDM', 'Serie A', 'ITA', 'Inter'),
+(91, 'Lautaro Martínez', 97, 'ST', 'Serie A', 'ARG', 'Inter'),
+(92, 'Harry Kane', 97, 'ST', 'Bundesliga', 'ENG', 'Bayern'),
+(93, 'Niklas Süle', 91, 'CB;RB', 'Bundesliga', 'GER', 'Dortmund'),
+(94, 'Nico Schlotterbeck', 93, 'CB', 'Bundesliga', 'GER', 'Dortmund'),
+(95, 'Gabriel Martinelli', 89, 'LW;RW;RM', 'Premier League', 'BRA', 'Arsenal');
 
 --
--- Indexek a kiírt táblákhoz
+-- Indexes for dumped tables
 --
 
 --
--- A tábla indexei `leaderboard`
+-- Indexes for table `leaderboard`
 --
 ALTER TABLE `leaderboard`
   ADD PRIMARY KEY (`Id`);
 
 --
--- A tábla indexei `players`
+-- Indexes for table `players`
 --
 ALTER TABLE `players`
   ADD PRIMARY KEY (`id`);
