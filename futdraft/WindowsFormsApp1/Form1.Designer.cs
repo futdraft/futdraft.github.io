@@ -29,6 +29,7 @@ namespace futdraft
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.formationSelect = new System.Windows.Forms.Label();
             this.form5back = new System.Windows.Forms.Button();
             this.form4back = new System.Windows.Forms.Button();
@@ -99,9 +100,7 @@ namespace futdraft
             this.Submit = new System.Windows.Forms.Button();
             this.UserName = new System.Windows.Forms.TextBox();
             this.ChemLabel911 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PlayerSelectBox)).BeginInit();
-            this.playerSelectBackground.SuspendLayout();
             this.SuspendLayout();
             // 
             // formationSelect
@@ -540,7 +539,6 @@ namespace futdraft
             // playerSelectBackground
             // 
             this.playerSelectBackground.BackColor = System.Drawing.Color.Black;
-            this.playerSelectBackground.Controls.Add(this.label1);
             this.playerSelectBackground.Location = new System.Drawing.Point(-10, -21);
             this.playerSelectBackground.Name = "playerSelectBackground";
             this.playerSelectBackground.Size = new System.Drawing.Size(1226, 687);
@@ -783,19 +781,6 @@ namespace futdraft
             this.ChemLabel911.TabIndex = 74;
             this.ChemLabel911.Text = "Felhasználónév:";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Purple;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(180, 81);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(780, 39);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "A mentés elkészült. A program hamarosan bezár.";
-            this.label1.Visible = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -871,12 +856,11 @@ namespace futdraft
             this.Controls.Add(this.Submit);
             this.Controls.Add(this.ChemLabel911);
             this.Controls.Add(this.UserName);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "FutDraft";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PlayerSelectBox)).EndInit();
-            this.playerSelectBackground.ResumeLayout(false);
-            this.playerSelectBackground.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -954,7 +938,6 @@ namespace futdraft
         private System.Windows.Forms.Button Submit;
         private System.Windows.Forms.TextBox UserName;
         private System.Windows.Forms.Label ChemLabel911;
-        private System.Windows.Forms.Label label1;
     }
 }
 

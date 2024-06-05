@@ -3,16 +3,22 @@
   "WorkspaceRootPath": "F:\\!HTML\\futdraft\\futdraft\\WindowsFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F5ECE138-D793-4E52-B21C-0FCB5C7F8C4B}|WindowsFormsApp1.csproj|f:\\!html\\futdraft\\futdraft\\windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|WindowsFormsApp1||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5ECE138-D793-4E52-B21C-0FCB5C7F8C4B}|WindowsFormsApp1.csproj|F:\\!HTML\\futdraft\\futdraft\\WindowsFormsApp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F5ECE138-D793-4E52-B21C-0FCB5C7F8C4B}|WindowsFormsApp1.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5ECE138-D793-4E52-B21C-0FCB5C7F8C4B}|WindowsFormsApp1.csproj|F:\\!HTML\\futdraft\\futdraft\\WindowsFormsApp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F5ECE138-D793-4E52-B21C-0FCB5C7F8C4B}|WindowsFormsApp1.csproj|f:\\!html\\futdraft\\futdraft\\windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5ECE138-D793-4E52-B21C-0FCB5C7F8C4B}|WindowsFormsApp1.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F5ECE138-D793-4E52-B21C-0FCB5C7F8C4B}|WindowsFormsApp1.csproj|F:\\!HTML\\futdraft\\futdraft\\WindowsFormsApp1\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
       "RelativeMoniker": "D:0:0:{F5ECE138-D793-4E52-B21C-0FCB5C7F8C4B}|WindowsFormsApp1.csproj|solutionrelative:properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5ECE138-D793-4E52-B21C-0FCB5C7F8C4B}|WindowsFormsApp1.csproj|f:\\!html\\futdraft\\futdraft\\windowsformsapp1\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|cc4014f5-b18d-439c-9352-f99d984cca85"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,24 +28,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "WindowsFormsApp1",
+              "DocumentMoniker": "F:\\!HTML\\futdraft\\futdraft\\WindowsFormsApp1\\WindowsFormsApp1.csproj",
+              "RelativeDocumentMoniker": "WindowsFormsApp1.csproj",
+              "ToolTip": "F:\\!HTML\\futdraft\\futdraft\\WindowsFormsApp1\\WindowsFormsApp1.csproj",
+              "RelativeToolTip": "WindowsFormsApp1.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-06-05T15:21:03.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "F:\\!HTML\\futdraft\\futdraft\\WindowsFormsApp1\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "F:\\!HTML\\futdraft\\futdraft\\WindowsFormsApp1\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAOQBAAAAAAAAAAAswAcCAAAfAAAA",
+              "ViewState": "AQIAAMQBAAAAAAAAAAAAAN4BAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-04T17:19:19.326Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "F:\\!HTML\\futdraft\\futdraft\\WindowsFormsApp1\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -51,7 +69,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Resources.resx",
               "DocumentMoniker": "F:\\!HTML\\futdraft\\futdraft\\WindowsFormsApp1\\Properties\\Resources.resx",
               "RelativeDocumentMoniker": "Properties\\Resources.resx",

@@ -166,9 +166,6 @@ C:\Users\samai.adam\Source\Repos\futdraft.github.io\futdraft\WindowsFormsApp1\ob
 C:\Users\samai.adam\Source\Repos\futdraft.github.io\futdraft\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
 C:\Users\samai.adam\Source\Repos\futdraft.github.io\futdraft\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\samai.adam\Source\Repos\futdraft.github.io\futdraft\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
-F:\!HTML\futdraft\futdraft\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
-F:\!HTML\futdraft\futdraft\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
-F:\!HTML\futdraft\futdraft\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
 F:\!HTML\futdraft\futdraft\WindowsFormsApp1\bin\Debug\BouncyCastle.Cryptography.dll
 F:\!HTML\futdraft\futdraft\WindowsFormsApp1\bin\Debug\Google.Protobuf.dll
 F:\!HTML\futdraft\futdraft\WindowsFormsApp1\bin\Debug\K4os.Compression.LZ4.dll
@@ -206,5 +203,12 @@ F:\!HTML\futdraft\futdraft\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Propertie
 F:\!HTML\futdraft\futdraft\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
 F:\!HTML\futdraft\futdraft\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 F:\!HTML\futdraft\futdraft\WindowsFormsApp1\obj\Debug\WindowsF.A1EEDF9B.Up2Date
-F:\!HTML\futdraft\futdraft\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
-F:\!HTML\futdraft\futdraft\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+F:\!HTML\futdraft\futdraft\WindowsFormsApp1\bin\Debug\FutDraft.exe.config
+F:\!HTML\futdraft\futdraft\WindowsFormsApp1\bin\Debug\FutDraft.exe
+F:\!HTML\futdraft\futdraft\WindowsFormsApp1\bin\Debug\FutDraft.pdb
+F:\!HTML\futdraft\futdraft\WindowsFormsApp1\obj\Debug\FutDraft.exe
+F:\!HTML\futdraft\futdraft\WindowsFormsApp1\obj\Debug\FutDraft.pdb
+F:\!HTML\futdraft\futdraft\WindowsFormsApp1\bin\Debug\FutDraft.exe.manifest
+F:\!HTML\futdraft\futdraft\WindowsFormsApp1\bin\Debug\FutDraft.application
+F:\!HTML\futdraft\futdraft\WindowsFormsApp1\obj\Debug\FutDraft.exe.manifest
+F:\!HTML\futdraft\futdraft\WindowsFormsApp1\obj\Debug\FutDraft.application

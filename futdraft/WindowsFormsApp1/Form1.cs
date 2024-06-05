@@ -475,6 +475,11 @@ namespace futdraft
 
         private void Submit_Click(object sender, EventArgs e)
         {
+            Submit.Text = "Mentés elkészült, a program bezáródik";
+            Submit.Location = new System.Drawing.Point((int)(Submit.Left -200), (int)(Submit.Top));
+            Submit.Size = new System.Drawing.Size((int)(Submit.Width +200), (int)(Submit.Height));
+            Submit.Enabled = false;
+            
             string name = UserName.Text;
             int score = int.Parse(Score.Text);
 
@@ -514,8 +519,7 @@ namespace futdraft
             }
             conn.Close();
 
-            Submit.Enabled = false;
-            label1.Visible = true;
+            
             System.Threading.Thread.Sleep(5000);
             Application.Exit();
         }
