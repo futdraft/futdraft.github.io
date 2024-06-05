@@ -97,6 +97,8 @@ namespace futdraft
             this.ChemLabel9 = new System.Windows.Forms.Label();
             this.Score = new System.Windows.Forms.Label();
             this.Submit = new System.Windows.Forms.Button();
+            this.UserName = new System.Windows.Forms.TextBox();
+            this.ChemLabel911 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PlayerSelectBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -536,9 +538,9 @@ namespace futdraft
             // playerSelectBackground
             // 
             this.playerSelectBackground.BackColor = System.Drawing.Color.Black;
-            this.playerSelectBackground.Location = new System.Drawing.Point(-10, -9);
+            this.playerSelectBackground.Location = new System.Drawing.Point(-10, -21);
             this.playerSelectBackground.Name = "playerSelectBackground";
-            this.playerSelectBackground.Size = new System.Drawing.Size(1099, 573);
+            this.playerSelectBackground.Size = new System.Drawing.Size(1226, 687);
             this.playerSelectBackground.TabIndex = 47;
             this.playerSelectBackground.Visible = false;
             // 
@@ -730,6 +732,7 @@ namespace futdraft
             this.OVR.Size = new System.Drawing.Size(13, 13);
             this.OVR.TabIndex = 69;
             this.OVR.Text = "0";
+            this.OVR.Visible = false;
             // 
             // ChemLabel9
             // 
@@ -748,22 +751,40 @@ namespace futdraft
             this.Score.Size = new System.Drawing.Size(13, 13);
             this.Score.TabIndex = 71;
             this.Score.Text = "0";
+            this.Score.Visible = false;
             // 
             // Submit
             // 
-            this.Submit.Location = new System.Drawing.Point(977, 304);
+            this.Submit.Location = new System.Drawing.Point(971, 364);
             this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(94, 23);
+            this.Submit.Size = new System.Drawing.Size(100, 23);
             this.Submit.TabIndex = 72;
             this.Submit.Text = "Submit Score";
             this.Submit.UseVisualStyleBackColor = true;
             this.Submit.Click += new System.EventHandler(this.Submit_Click);
             // 
+            // UserName
+            // 
+            this.UserName.Location = new System.Drawing.Point(971, 338);
+            this.UserName.Name = "UserName";
+            this.UserName.Size = new System.Drawing.Size(100, 20);
+            this.UserName.TabIndex = 73;
+            this.UserName.Visible = false;
+            // 
+            // ChemLabel911
+            // 
+            this.ChemLabel911.AutoSize = true;
+            this.ChemLabel911.Location = new System.Drawing.Point(971, 322);
+            this.ChemLabel911.Name = "ChemLabel911";
+            this.ChemLabel911.Size = new System.Drawing.Size(84, 13);
+            this.ChemLabel911.TabIndex = 74;
+            this.ChemLabel911.Text = "Felhasználónév:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1083, 556);
+            this.ClientSize = new System.Drawing.Size(1079, 554);
             this.Controls.Add(this.playerSelect1);
             this.Controls.Add(this.playerSelect2);
             this.Controls.Add(this.playerSelect5);
@@ -832,6 +853,8 @@ namespace futdraft
             this.Controls.Add(this.OVR);
             this.Controls.Add(this.ChemLabel8);
             this.Controls.Add(this.Submit);
+            this.Controls.Add(this.ChemLabel911);
+            this.Controls.Add(this.UserName);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -911,6 +934,8 @@ namespace futdraft
         private System.Windows.Forms.Label ChemLabel9;
         private System.Windows.Forms.Label Score;
         private System.Windows.Forms.Button Submit;
+        private System.Windows.Forms.TextBox UserName;
+        private System.Windows.Forms.Label ChemLabel911;
     }
 }
 

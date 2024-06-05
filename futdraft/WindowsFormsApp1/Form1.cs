@@ -42,6 +42,15 @@ namespace futdraft
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            float scaleFactor = 1.75f;
+            foreach (Control control in this.Controls)
+            {
+                control.Size = new System.Drawing.Size((int)(control.Width * scaleFactor), (int)(control.Height * scaleFactor));
+                control.Location = new System.Drawing.Point((int)(control.Left * scaleFactor), (int)(control.Top * scaleFactor));
+                control.Font = new Font(control.Font.FontFamily, control.Font.Size * scaleFactor, control.Font.Style);
+            }
+            this.WindowState = FormWindowState.Maximized;
+
             string kapcs = "server=localhost;database=futdraft;user=root;password=;port=3306;";
             MySqlConnection conn = new MySqlConnection(kapcs);
             try
@@ -131,6 +140,9 @@ namespace futdraft
                 }
             }
             formationSelect.Visible = false;
+            OVR.Visible = true;
+            Score.Visible = true;
+            UserName.Visible = true;
         }
 
         private void form4back_Click(object sender, EventArgs e)
@@ -158,6 +170,9 @@ namespace futdraft
                 }
             }
             formationSelect.Visible = false;
+            OVR.Visible = true;
+            Score.Visible = true;
+            UserName.Visible = true;
         }
 
         private void form3back_Click(object sender, EventArgs e)
@@ -186,6 +201,9 @@ namespace futdraft
                 }
             }
             formationSelect.Visible = false;
+            OVR.Visible = true;
+            Score.Visible = true;
+            UserName.Visible = true;
         }
 
         private void button_clicked(object sender, EventArgs e)
@@ -222,6 +240,16 @@ namespace futdraft
 
                     selectedPlayer = "";
                     selectedPlayer2 = "";
+
+                    starting11.Clear();
+                    foreach (var player in team)
+                    {
+                        if (!player.Key.Contains("sub") && player.Value != null && !starting11.Keys.ToArray().Contains(player.Key))
+                        {
+                            starting11.Add(player.Key, player.Value);
+                        }
+                    }
+                    CalculateChem();
                 }
             }
 
