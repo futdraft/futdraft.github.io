@@ -225,18 +225,7 @@ namespace futdraft
                 }
             }
 
-            starting11.Clear();
-            foreach (var player in team)
-            {
-                if (!player.Key.Contains("sub") && player.Value != null && !starting11.Keys.ToArray().Contains(player.Key))
-                {
-                    starting11.Add(player.Key, player.Value);
-                }
-            }
-            if (starting11.Count() != 0)
-            {
-                CalculateChem();
-            }
+            
         }
 
         public void generate_players(string pos)
@@ -269,7 +258,9 @@ namespace futdraft
             List<Player> availablePlayers = new List<Player>();
             foreach (var player in Players)
             {
-                if (player.Pos.Contains(pos.ToUpper()) || pos == "sub")
+                //player.Pos.Contains(pos.ToUpper())
+                
+                if (player.Pos.Split(';').Contains(pos.ToUpper()) || pos == "sub")
                 {
                     availablePlayers.Add(player);
                 }
@@ -314,6 +305,19 @@ namespace futdraft
             }
             Players.Remove(generatedPlayers[n]);
             generatedPlayers.Clear();
+
+            starting11.Clear();
+            foreach (var player in team)
+            {
+                if (!player.Key.Contains("sub") && player.Value != null && !starting11.Keys.ToArray().Contains(player.Key))
+                {
+                    starting11.Add(player.Key, player.Value);
+                }
+            }
+            if (starting11.Count() != 0)
+            {
+                CalculateChem();
+            }
         }
 
         private void CalculateChem()
@@ -432,8 +436,8 @@ namespace futdraft
             leagueChemistry.Text = Convert.ToString(leagues.Values.Sum());
             teamChemistry.Text = Convert.ToString(teams.Values.Sum());
 
-            OVR.Text = Convert.ToString(starting11.Values.Average(player => player.Ovr));
-            Score.Text = Convert.ToString(Chemistry + starting11.Values.Average(player => player.Ovr));
+            OVR.Text = Convert.ToString(Math.Floor(starting11.Values.Average(player => player.Ovr)));
+            Score.Text = Convert.ToString(Math.Floor(Chemistry + starting11.Values.Average(player => player.Ovr)));
 
             if (team.Values.All(value => value != null))
             {

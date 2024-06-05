@@ -538,7 +538,7 @@ namespace futdraft
             this.playerSelectBackground.BackColor = System.Drawing.Color.Black;
             this.playerSelectBackground.Location = new System.Drawing.Point(-10, -9);
             this.playerSelectBackground.Name = "playerSelectBackground";
-            this.playerSelectBackground.Size = new System.Drawing.Size(1099, 565);
+            this.playerSelectBackground.Size = new System.Drawing.Size(1099, 573);
             this.playerSelectBackground.TabIndex = 47;
             this.playerSelectBackground.Visible = false;
             // 
