@@ -71,33 +71,34 @@
 
                 <div>
                     <?php
-        $sql = "SELECT tanulonev, tanuloszulido FROM tanulok WHERE tanulovaros = 'Eger' ORDER BY tanuloszulido";
-        $kapcs = new mysqli("localhost","root","","iskola");
-        if ($kapcs -> connect_errno)
-        {
-            die("Hiba történt: " . $kapcs -> connect_error);
-        }
-        else
-        {
-            echo "Az adatbáziskapcsolat rendben létrejött.";
-        }
+                        $sql = "SELECT * FROM leaderboard ORDER BY Score DESC LIMIT 10";
+                        $kapcs = new mysqli("localhost","root","","futdraft");
+                        if ($kapcs -> connect_errno)
+                        {
+                            die("Hiba történt: " . $kapcs -> connect_error);
+                        }
+                        else
+                        {
+                            echo "Az adatbáziskapcsolat rendben létrejött.";
+                        }
 
-        $eredmeny = $kapcs -> query($sql);
+                        $eredmeny = $kapcs -> query($sql);
 
-        echo "<p>Az egri tanulók száma: " . $eredmeny -> num_rows . "</p>";
+                        echo "<h2>Legjobb draftok:" . $eredmeny -> num_rows . "</h2>";
 
-        echo "<table>";
-        while ($sor = $eredmeny -> fetch_assoc())
-        {
-            echo "<tr>";
-            echo "<td>$sor[tanulonev]</td>";
-            echo "<td>$sor[tanuloszulido]</td>";
-            echo "</tr>";
-        }
-        echo "</table>";
+                        echo "<table>";
+                        while ($sor = $eredmeny -> fetch_assoc())
+                        {
+                            echo "<tr>";
+                            echo "<td>$sor[Id].</td>";
+                            echo "<td>$sor[Name]</td>";
+                            echo "<td>$sor[Score]</td>";
+                            echo "</tr>";
+                        }
+                        echo "</table>";
 
-        $kapcs -> close();
-    ?>
+                        $kapcs -> close();
+                    ?>
                 </div>
 
                 <br>
