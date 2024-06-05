@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Jún 04. 21:56
+-- Létrehozás ideje: 2024. Jún 05. 18:04
 -- Kiszolgáló verziója: 10.4.32-MariaDB
 -- PHP verzió: 8.2.12
 
@@ -34,6 +34,22 @@ CREATE TABLE `leaderboard` (
   `Name` tinytext NOT NULL,
   `Score` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- A tábla adatainak kiíratása `leaderboard`
+--
+
+INSERT INTO `leaderboard` (`Id`, `Name`, `Score`) VALUES
+(1, 'Bálint', 10),
+(2, 'Bálint', 128),
+(3, 'Sajtfej', 145),
+(4, 'Péter', 132),
+(5, 'Koppány', 126),
+(6, 'Anna', 114),
+(7, 'Fülöp', 138),
+(8, 'Fülöp', 146),
+(9, 'Viktor', 126),
+(10, 'Csaba', 126);
 
 -- --------------------------------------------------------
 
