@@ -79,18 +79,20 @@
                         }
                         else
                         {
-                            echo "Az adatbáziskapcsolat rendben létrejött.";
+                            
                         }
 
                         $eredmeny = $kapcs -> query($sql);
+                        $i = 0;
 
-                        echo "<h2>Legjobb draftok:" . $eredmeny -> num_rows . "</h2>";
+                        echo "<h2>Legjobb draftok:</h2>";
 
                         echo "<table>";
                         while ($sor = $eredmeny -> fetch_assoc())
                         {
+                            $i += 1;
                             echo "<tr>";
-                            echo "<td>$sor[Id].</td>";
+                            echo "<td>$i.</td>";
                             echo "<td>$sor[Name]</td>";
                             echo "<td>$sor[Score]</td>";
                             echo "</tr>";
@@ -103,7 +105,7 @@
 
                 <br>
 
-                <p id="download" style="height: 200px; color: black; visibility: hidden;">a</p>
+                <p id="download" style="height: 100px; color: black; visibility: hidden;">a</p>
                 <h2>Letöltés:</h2>
                 <p>Még nem érhető el</p>
             </div>
