@@ -91,7 +91,7 @@
         style="background-image: url(images/websitebackground.jpg); background-repeat: no-repeat; width: 100%; height: 1080px; background-position-x: 100%; margin-bottom: 0;padding-bottom: 0;">
         <div class=" text-white centerdiv">
             <h2 class="center" style="top: 35%;">Ugorj bele csapatépítés világába!</h2>
-            <a class="btn btn-success center" href="https://github.com/futdraft/futdraft.github.io/releases/download/alpha/FutDraft.exe" style="top: 65%; width: fit-content;">Letöltés</a>
+            <a class="btn btn-success center" href="https://github.com/futdraft/futdraft.github.io/releases/download/alphag/FutDraft.exe" style="top: 65%; width: fit-content;">Letöltés</a>
         </div>
     </div>
     <div style="background-image: url(images/background.jpg);">
