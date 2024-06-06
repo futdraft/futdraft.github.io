@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Jún 05. 18:04
--- Kiszolgáló verziója: 10.4.32-MariaDB
--- PHP verzió: 8.2.12
+-- Létrehozás ideje: 2024. Jún 06. 08:53
+-- Kiszolgáló verziója: 10.4.28-MariaDB
+-- PHP verzió: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -80,7 +80,7 @@ INSERT INTO `players` (`id`, `name`, `ovr`, `pos`, `league`, `nation`, `team`) V
 (6, 'Jude Bellingham', 97, 'CM;CAM', 'Laliga', 'ENG', 'Real Madrid'),
 (7, 'Kevin De Bruyne', 96, 'CM;CAM', 'Premier League', 'BEL', 'Manchester City'),
 (8, 'Luka Modric', 96, 'CM;CDM', 'Laliga', 'HRV', 'Real Madrid'),
-(9, 'Declan Rice', 96, 'CM;CDM', 'Premier League', 'HRV', 'Real Madrid'),
+(9, 'Declan Rice', 96, 'CM;CDM', 'Premier League', 'ENG', 'Arsenal'),
 (10, 'Cristiano Ronaldo', 96, 'ST', 'Saudi League', 'PRT', 'Al Nassr'),
 (11, 'Ousmane Dembelé', 96, 'RW;RM;LW', 'Ligue 1', 'FRA', 'Paris SG'),
 (12, 'Vitinha', 96, 'CM;CAM', 'Ligue 1', 'PRT', 'Paris SG'),
@@ -152,7 +152,36 @@ INSERT INTO `players` (`id`, `name`, `ovr`, `pos`, `league`, `nation`, `team`) V
 (78, 'David Beckham', 91, 'RM;RW;CM', 'Icon', 'ENG', 'Icon'),
 (79, 'Frenkie De Jong', 93, 'CM', 'Laliga', 'NLD', 'FC Barcelona'),
 (80, 'Pablo Gavi', 88, 'CM;CAM;LW', 'Laliga', 'ESP', 'FC Barcelona'),
-(81, 'Pedri', 92, 'CM;CAM', 'Laliga', 'ESP', 'FC Barcelona');
+(81, 'Pedri', 92, 'CM;CAM', 'Laliga', 'ESP', 'FC Barcelona'),
+(82, 'Luis Suárez', 94, 'ST', 'MLS', 'URY', 'Inter Miami'),
+(83, 'Lionel Messi', 94, 'ST;CAM', 'MLS', 'ARG', 'Inter Miami'),
+(84, 'Sergio Busquets', 93, 'CDM;CM', 'MLS', 'ESP', 'Inter Miami'),
+(85, 'Jordi Alba', 93, 'LB;LWB', 'MLS', 'ESP', 'Inter Miami'),
+(86, 'Jack Grealish', 90, 'LW;LM', 'Premier League', 'ENG', 'Manchester City'),
+(87, 'Darwin Nunez', 90, 'LW;ST', 'Premier League', 'URY', 'Liverpool'),
+(88, 'Hakan Calhanoglu', 90, 'CM;CAM;CDM', 'Serie A', 'TUR', 'Inter'),
+(89, 'Yann Aurel Bisseck', 93, 'CB', 'Serie A', 'GER', 'Inter'),
+(90, 'Nicolo Barella', 90, 'CM;CDM', 'Serie A', 'ITA', 'Inter'),
+(91, 'Lautaro Martínez', 97, 'ST', 'Serie A', 'ARG', 'Inter'),
+(92, 'Harry Kane', 97, 'ST', 'Bundesliga', 'ENG', 'Bayern'),
+(93, 'Niklas Süle', 91, 'CB;RB', 'Bundesliga', 'GER', 'Dortmund'),
+(94, 'Nico Schlotterbeck', 93, 'CB', 'Bundesliga', 'GER', 'Dortmund'),
+(95, 'Gabriel Martinelli', 89, 'LW;RW;RM', 'Premier League', 'BRA', 'Arsenal'),
+(96, 'Diogo Jota', 90, 'ST;LW', 'Premier League', 'PRT', 'Liverpool'),
+(97, 'Heung Min Son', 94, 'ST;LW;LM', 'Premier League', 'KOR', 'Tottenham'),
+(98, 'Kim Min Jae', 89, 'CB', 'Bundesliga', 'KOR', 'Bayern'),
+(99, 'Lothar Mattaus', 93, 'CB;CDM;CM', 'Icon', 'GER', 'Icon'),
+(100, 'Dominik Szoboszlai', 92, 'CM;CAM', 'Premier League', 'HUN', 'Liverpool'),
+(101, 'Lorenzo Pellegrini', 93, 'CM;CAM', 'Serie A', 'ITA', 'Roma'),
+(102, 'Federico Dimarco', 93, 'LWB;LM;LB;CB', 'Serie A', 'ITA', 'Inter'),
+(103, 'Gianfranco Zola', 91, 'ST', 'Icon', 'ITA', 'Icon'),
+(104, 'Federicon Chiesa', 91, 'LM;LW;RW', 'Serie A', 'ITA', 'Juventus'),
+(105, 'Adrien Rabiot', 92, 'CM;CDM;LM', 'Serie A', 'FRA', 'Juventus'),
+(106, 'Fernando Torres', 89, 'ST', 'Icon', 'ESP', 'Icon'),
+(107, 'Xavi', 91, 'CM', 'Icon', 'ESP', 'Icon'),
+(108, 'Joao Felix', 94, 'LW;LM;ST', 'Laliga', 'PRT', 'FC Barcelona'),
+(109, 'Bruno Fernandes', 89, 'CAM;CM', 'Premier League', 'PRT', 'Manchester United'),
+(110, 'Roland Sallai', 81, 'CAM;RW;RM', 'Bundesliga', 'HUN', 'Freiburg');
 
 --
 -- Indexek a kiírt táblákhoz
