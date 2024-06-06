@@ -405,6 +405,37 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <EmbeddedResource Include="resources\images\10-awards.png" />
+    <EmbeddedResource Include="resources\images\100.png" />
+    <EmbeddedResource Include="resources\images\101.png" />
+    <EmbeddedResource Include="resources\images\102.png" />
+    <EmbeddedResource Include="resources\images\103.png" />
+    <EmbeddedResource Include="resources\images\104.png" />
+    <EmbeddedResource Include="resources\images\105.png" />
+    <EmbeddedResource Include="resources\images\106.png" />
+    <EmbeddedResource Include="resources\images\107.png" />
+    <EmbeddedResource Include="resources\images\108.png" />
+    <EmbeddedResource Include="resources\images\109.png" />
+    <EmbeddedResource Include="resources\images\110.png" />
+    <EmbeddedResource Include="resources\images\82.png" />
+    <EmbeddedResource Include="resources\images\83.png" />
+    <EmbeddedResource Include="resources\images\84.png" />
+    <EmbeddedResource Include="resources\images\85.png" />
+    <EmbeddedResource Include="resources\images\86.png" />
+    <EmbeddedResource Include="resources\images\87.png" />
+    <EmbeddedResource Include="resources\images\88.png" />
+    <EmbeddedResource Include="resources\images\89.png" />
+    <EmbeddedResource Include="resources\images\90.png" />
+    <EmbeddedResource Include="resources\images\91.png" />
+    <EmbeddedResource Include="resources\images\92.png" />
+    <EmbeddedResource Include="resources\images\93.png" />
+    <EmbeddedResource Include="resources\images\94.png" />
+    <EmbeddedResource Include="resources\images\95.png" />
+    <EmbeddedResource Include="resources\images\96.png" />
+    <EmbeddedResource Include="resources\images\97.png" />
+    <EmbeddedResource Include="resources\images\98.png" />
+    <EmbeddedResource Include="resources\images\99.png" />
+    <EmbeddedResource Include="resources\images\hatter.png" />
     <EmbeddedResource Include="resources\images\icon.ico" />
   </ItemGroup>
   <ItemGroup>

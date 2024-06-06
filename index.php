@@ -41,13 +41,41 @@
     }
     table
     {
-        margin: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        margin: auto;
         width: 100%;
-        color: red;
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 1.2em;
+        width: 90%;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    table tr:nth-child(even) {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    table tr:nth-child(odd) {
+        background-color: rgba(100, 100, 100, 0)
+    }
+
+    table tr:first-child {
+    background-color: #DB8C15;
+    font-weight: bolder;
+    box-shadow: 0 0 20px gold;
+    }
+
+    table tr:nth-child(2) {
+        background-color: #ABABAB;
+        font-weight: bolder;
+    }
+    table tr:nth-child(3) {
+        background-color: #B1560F;
+        font-weight: bolder;
+    }
+    p
+    {
+        font-size: 1.2em;
     }
 </style>
 
@@ -63,8 +91,7 @@
         style="background-image: url(images/websitebackground.jpg); background-repeat: no-repeat; width: 100%; height: 1080px; background-position-x: 100%; margin-bottom: 0;padding-bottom: 0;">
         <div class=" text-white centerdiv">
             <h2 class="center" style="top: 35%;">Ugorj bele csapatépítés világába!</h2>
-            <a class="btn btn-success center" href="#download" style="top: 65%; width: fit-content;">Irány a
-                letöltésekhez!</a>
+            <a class="btn btn-success center" href="https://github.com/futdraft/futdraft.github.io/releases/download/alpha/FutDraft.exe" style="top: 65%; width: fit-content;">Letöltés</a>
         </div>
     </div>
     <div style="background-image: url(images/background.jpg);">
@@ -72,16 +99,18 @@
             <div class="container" style="padding-top: 100px;">
                 <H2>Bemutató a játékhoz</H2>
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos beatae ad nam aliquid officia facere
-                    ipsum in illum, nemo doloribus sequi atque vero, eveniet dicta? Voluptatem quos numquam voluptates
-                    eum.
+                A FutDraft egy izgalmas játék, amely lehetővé teszi, hogy egy álomcsapatot építs össze korlátozott lehetőségek mellett.
+Először válaszd ki a csapatod formációját. Fontos tudni, hogy miután kiválasztottad, nem változtathatod meg.
+A következő lépésben válaszd ki a játékosokat. A játékosokat véletlenszerűen kapod, és a legmagasabb értéket képviselő játékosok közül választhatsz.
+A kiválasztott játékosokból építsd fel a csapatodat. Figyelj a kémiai kapcsolatokra, mert ezek határozzák meg a csapat teljesítményét.
+
                 </p>
 
                 <br>
 
                 <div style="justify-content: center;">
-                <h2>Legjobb draftok:</h2>
-                    <table class="center">
+                <h2><span><img src="images/10-awards.png" alt="" style="height: 50px;"></span> Legjobb draftok: </h2>
+                    <table class="">
                     <?php
                         $sql = "SELECT * FROM leaderboard ORDER BY Score DESC LIMIT 10";
                         $kapcs = new mysqli("localhost","root","","futdraft");
@@ -111,12 +140,6 @@
                     ?>
                     </table>
                 </div>
-
-                <br>
-
-                <p id="download" style="height: 100px; color: black; visibility: hidden;">a</p>
-                <h2>Letöltés:</h2>
-                <p>Még nem érhető el</p>
             </div>
         </div>
     </div>
