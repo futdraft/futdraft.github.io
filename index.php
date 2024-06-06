@@ -39,6 +39,16 @@
             width: 400px;
         }
     }
+    table
+    {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        color: red;
+    }
 </style>
 
 <body>
@@ -69,7 +79,9 @@
 
                 <br>
 
-                <div>
+                <div style="justify-content: center;">
+                <h2>Legjobb draftok:</h2>
+                    <table class="center">
                     <?php
                         $sql = "SELECT * FROM leaderboard ORDER BY Score DESC LIMIT 10";
                         $kapcs = new mysqli("localhost","root","","futdraft");
@@ -85,9 +97,6 @@
                         $eredmeny = $kapcs -> query($sql);
                         $i = 0;
 
-                        echo "<h2>Legjobb draftok:</h2>";
-
-                        echo "<table>";
                         while ($sor = $eredmeny -> fetch_assoc())
                         {
                             $i += 1;
@@ -97,10 +106,10 @@
                             echo "<td>$sor[Score]</td>";
                             echo "</tr>";
                         }
-                        echo "</table>";
 
                         $kapcs -> close();
                     ?>
+                    </table>
                 </div>
 
                 <br>
